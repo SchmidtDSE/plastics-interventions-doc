@@ -11,7 +11,7 @@ jobs:
     name: Convert
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout this repo (plastics-interventions-doc)
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Convert Markdown to PDF
         run: |
@@ -20,6 +20,11 @@ jobs:
             output_file="pdfs/$(basename $file .md).pdf"
             docker run --volume $PWD:/data pandoc/latex:2.9 --output=/data/$output_file /data/$file
           done
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: pdfs
+          path: pdfs
   upload: 
     name: Upload
     runs-on: ubuntu-latest
@@ -27,11 +32,10 @@ jobs:
     environment: deploy
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Upload GitHub artifact
-        uses: actions/upload-artifact@v3
+      - name: Download PDFs
+        uses: actions/download-artifact@v3
         with:
           name: pdfs
-          path: pdfs
       - name: Upload PDFs to tool
         uses: Creepios/sftp-action@v1.0.3
         with:
