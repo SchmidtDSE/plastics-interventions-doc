@@ -20,11 +20,13 @@ jobs:
             output_file="pdfs/$(basename $file .md).pdf"
             docker run --volume $PWD:/data pandoc/latex:2.9 --output=/data/$output_file /data/$file
           done
+      - name: Nest zip
+        run: zip -r pdfs.zip ./pdfs
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: pdfs
-          path: pdfs
+          path: pdfs.zip
   upload: 
     name: Upload
     runs-on: ubuntu-latest
