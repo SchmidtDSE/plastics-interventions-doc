@@ -38,6 +38,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: pdfs
+      - name: Unzip
+        run: unzip pdfs.zip
       - name: Upload PDFs to tool
         uses: Creepios/sftp-action@v1.0.3
         with:
