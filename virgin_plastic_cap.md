@@ -84,12 +84,17 @@ Here, $\Delta_{import}$ comes from the region in which the intervention is appli
 <br>
 <br>
 
-# Interactions
+# Discussion
+This technical note now turns to interactions and future work.
+
+\medskip
+<br>
+
+## Interactions
 This intervention may interact with others in various ways but the primary mechanisms are through reduced consumption and waste. First, this change is considered prior to consumption-dependent interventions like minimum recycled content as it may change their targets. Second, the waste and, specifically, recycling available for other interventions may be impacted by this intervention. Therefore, this is either evaluated prior to those waste-dependent interventions where goals may be influenced by the waste amounts or this intervention places a constraint alongside the other intervention (if its goal is absolute) with the strictest constraint prevailing such that all lever's goals are met.
 
-\bigskip
-<br>
+\medskip
 <br>
 
-# Future work
+## Future work
 That this cap applies to consumption may be revisited in later iterations.
