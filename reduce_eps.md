@@ -2,7 +2,7 @@
 title: Reduce Polystyrene
 numbersections: true
 ---
-This intervention reduces material is used in the scenario "Ban Polystyrene Packaging" and operates by simply reducing consumption in packaging and sending that on-wards to waste and trade.
+Used in the scenario "Ban Polystyrene Packaging" on the first tab, this intervention reduces material and operates by simply subtracting consumption in packaging and sending that delta "onwards" to waste and trade.
 
 \bigskip
 <br>
@@ -12,13 +12,15 @@ This intervention reduces material is used in the scenario "Ban Polystyrene Pack
 
 - There is a known percent of polystyrene used in packaging ($\%_{packaging-PS}$).
 - The reduction is linear from 2024 to configurable end date (default of 2050).
+- The change in consumption to the change in waste generation is subject to lifecycle distribution delays.
+- The lifecycle duration for polystyrene is the same as the larger packaging consumption sector. 
 
 \bigskip
 <br>
 <br>
 
 # Primary impact
-This intervention assumes an input percent reduction in polystyrene consumption and has access to the percent of packaging that uses that polymer (~3.4%) by mass. The change to packaging becomes the following:
+This intervention assumes an input percent reduction in polystyrene consumption and has access to the percent of packaging that uses that polymer (~3.4% by default) by mass. The change to packaging becomes the following:
 
 $C_{packaging} = C_{packaging} - \Delta_{PS}$
 $C_{packaging} = C_{packaging} - (C_{packaging} * \%_{packaging-PS} * \%_{PS-reduction})$
@@ -34,11 +36,11 @@ The reduction in polystrene $\Delta_{PS}$ is distributed proportionally across w
 
 $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{PS}$
 
-Note that imports also change as a result of reduced consumption:
+This change in waste is subject to lifecycle distribution delays. Note that imports also change as a result of reduced consumption:
 
-$P_{import} = P_{import} - \frac{P_{import}}{P_{total}} * \Delta_{PS}$
+$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * \Delta_{PS}$
 
-Here $P$ is all input plastics including domestic production and imports.
+Here $C$ is all input plastics (consumption) including domestic production and imports.
 
 \bigskip
 <br>
@@ -47,9 +49,18 @@ Here $P$ is all input plastics including domestic production and imports.
 # Tertiary effects
 As imports have changed, exports from other countries will reduce as well:
 
-$P_{region-export} = P_{region-export} - \frac{P_{region-export}}{P_{total-export}} * \Delta_{import}$
+$T_{region-export} = T_{region-export} - \frac{T_{region-export}}{T_{total-export}} * \Delta_{import}$
 
 Note that $\Delta_{import}$ comes from the region in which the intervention was introduced.
+
+\bigskip
+<br>
+<br>
+
+# Interactions
+This intervention may interact with others in multiple ways but the primary mechanisms are consumption and waste. First, this lever's reductions are visible in production and consumption-dependent interventions like minimum recycled content. For example, a cap on virgin production can use this lever as "credit" towards its goal before further reducing plastic generation to meet its target. Second, this does impact waste like the amount of recyclable material available for interventions like minimum recycled content. To that end, the reduction in available recycled material is visible for waste-dependent interventions including caps on different waste streams.
+
+In practice, this intervention places a constraint on production of plastics alongside the constraints considered by other interventions and the "strictest" constraint is the one that is ultimately reported. The same holds true for waste generation impact such that another intervention may "supersede" this lever if the materials being reduced by this intervention do not allow that other lever to achieve its goals.
 
 \bigskip
 <br>
