@@ -20,6 +20,7 @@ This intervention relies on information about capital and operating expense to i
 - Capital expenditure is amortized over 50 years.
 - The expanded capacity will be used for all waste types of which only a fraction is plastic ($\%_{plastic}$).
 - The addition of new infrastructure will redirect landfill and mismanaged to incineration.
+- There are known region specific observed values for mass of waste incinerated ($m_{incinerated}$) and both the operating cost ($r_{opex}$) 
 
 \medskip
 <br>
@@ -32,7 +33,15 @@ TODO (Nivedita / Elijah): Details on where the data come from.
 <br>
 
 # Primary impact
-This intervention assumes an change in the incineration ($m_{increase}$) changing over time:
+Investment is a mix of capital and operating expense:
+
+$r_{annual} = r_{annual-operating} + r_{capital} / 50$
+
+This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
+
+$m_{increase} = I * r_{annual}$
+
+With this potential change defined:
 
 $\Delta_{incineration} = min(m_{increase} * \%_{plastic}, W_{mismanaged} + W_{landfill})$
 
