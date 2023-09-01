@@ -8,11 +8,26 @@ This intervention redirects waste from other end of life fates to recycling. It 
 <br>
 <br>
 
-# Assumptions
+# Introduction
+This intervention is mechanistic and does not use significant external literature support. Even still, it makes a number of important and often user configurable assumptions.
 
-- There is a displacement rate $d$ which describes how much of virgin plastic production is reduced or displaced by newly available recycled material. Note that this may cause consumption to go up as a result of increased recycling.
-- This intervention is assumed to have minimum recycling rate go up from 2024 to the end date (2050 by default).
-- A lag is expected from change in waste to change in consumption and production (default of 3 years).
+\medskip
+<br>
+
+## Assumptions
+
+- There is a displacement rate $d$ which, though user configurable, is non-zero by default and describes how much of virgin plastic production is reduced or displaced by newly available recycled material.
+- Displacement rate $d$ may cause consumption to go up as a result of increased recycling: more recycled material is available but it does not fully offset existing production by the same amount, resulting in more plastics goods being made overall.
+- This intervention is assumed to have minimum recycling rate go up gradually and linearlly from 2024 to the end date (2050 by default).
+- A lag is expected from when the recycling increases to when that newly recycled material is available for consumption (default of 1 year).
+- This intervention mandates a collection rate and not the actual amount of recycled plastics available for consumption.
+- There is a change from consumption to waste generation that is not immediate but, instead, governed by sector lifetime distributions.
+
+\medskip
+<br>
+
+## External knowledge
+This intervention does not use external literature to provide constants or other numbers beyond what is in the model itself.
 
 \bigskip
 <br>
@@ -34,22 +49,6 @@ See secondary effects for change to consumption.
 <br>
 
 # Secondary impact
-There is a decrease in consumption according to the displacement rate as well as an increase in production.
-
-\medskip
-<br>
-
-## Decrease consumption
-The change to consumption is as follows:
-
-$C_{sector} = C_{sector} - \frac{C_{sector}}{C_{total}} * \Delta_{recycling} * d$
-
-This has effects on trade as well as described in tertiary effects.
-
-\medskip
-<br>
-
-## Increase consumption
 Due to displacement rate, there is actually _new_ consumption to account for the part not displaced:
 
 $C_{sector} = C_{sector} + \frac{C_{sector}}{C_{total}} * \Delta_{recycling} * (1 - d)$
@@ -66,26 +65,42 @@ There are tertiary effects on both waste and trade.
 \medskip
 <br>
 
-## Displaced plastics impact on trade
-New recycling which does displace virgin plastics has an impact on imports like so:
+## Trade
+New virgin plastics has an impact on imports like so:
 
-$P_{import} = P_{import} - \frac{P_{import}}{P_{total}} * d * \Delta_{recycling}$
+$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * (1 - d) * \Delta_{recycling}$
 
 This change in imports has an additional downstream effect on other region's exports:
 
-$P_{region-export} = P_{region-export} - \frac{P_{region-export}}{P_{total-export}} * \Delta_{import}$
+$T_{region-export} = T_{region-export} - \frac{T_{region-export}}{T_{total-export}} * \Delta_{import}$
+
+Note that $\Delta_{import}$ comes from the region in which the intervention was introduced.
 
 \medskip
 <br>
 
-## Non-displaced plastics
+## Waste
 The increase in consumption has downstream effects on waste as follows:
 
 $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{recycling} * (1 - d)$
+
+This is time delayed based on the sector lifetime distributions of change in the consumption.
 
 \bigskip
 <br>
 <br>
 
-# Future work
+# Discussion
+This technical note now turns to interactions and future work.
+
+\medskip
+<br>
+
+## Interactions
+Though not fully exhaustive, this intervention interacts with others primarily through recycling rate and consumption. First, other interventions such as recycling investment may cause recycling to be higher than the minimum mandated by this policy. In practice, each intervention creates a minimum recycling rate and the maximum of those minimums is what is ultimately simulated such that all constraints are met. Second, this may influence consumption and that change is considered prior to consumption-dependent targets like minimum recycled content.
+
+\medskip
+<br>
+
+## Future work
 Further refinement of the assumed displacement rate.
