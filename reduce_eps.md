@@ -9,7 +9,7 @@ Used in the scenario "Ban Polystyrene Packaging" on the first tab, this interven
 <br>
 
 # Introduction
-This intervention does account for some knowledge external to the tool's model itself and it also makes a number of important assumptions that are often user-configurable.
+This intervention is mechanistic and does not use significant external literature support. Even still, it makes a number of important and often user configurable assumptions.
 
 \medskip
 <br>
@@ -25,7 +25,7 @@ This intervention does account for some knowledge external to the tool's model i
 <br>
 
 ## External knowledge
-The tool itself is not aware of the polymer and, instead, is only aware of the packaging sector. This uses the polystyrene distribution information from the underlying model as "external" constants.
+This intervention does not use external literature to provide constants or other numbers beyond what is in the model itself though it uses some polymer-level data available from the underlying business as usual model.
 
 \bigskip
 <br>
@@ -76,7 +76,7 @@ This technical note now turns to interactions and future work.
 <br>
 
 ## Interactions
-This intervention may interact with others in multiple ways but the primary mechanisms are consumption and waste. First, this lever's reductions are visible in production and consumption-dependent interventions like minimum recycled content. For example, a cap on virgin production can use this lever as "credit" towards its goal before further reducing plastic generation to meet its target. Second, this does impact waste like the amount of recyclable material available for interventions like minimum recycled content. To that end, the reduction in available recycled material is visible for waste-dependent interventions including caps on different waste streams.
+This intervention may interact with others in multiple ways but the primary mechanisms are consumption and waste. First, this lever's reductions are visible in production and consumption-dependent interventions like minimum recycled content. For example, a cap on virgin production can use this lever as "credit" towards its goal before further reducing plastic generation to meet its target. Second, this impacts waste like the amount of recyclable material available for interventions such as minimum recycled content. To that end, the reduction in available recycled material is visible for waste-dependent interventions including caps on different waste streams.
 
 In practice, this intervention places a constraint on production of plastics alongside the constraints considered by other interventions and the "strictest" constraint is the one that is ultimately reported. The same holds true for waste generation impact such that another intervention may "supersede" this lever if the materials being reduced by this intervention do not allow that other lever to achieve its goals.
 
