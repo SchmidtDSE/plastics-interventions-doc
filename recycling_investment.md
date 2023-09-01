@@ -25,6 +25,7 @@ This intervention relies on information about capital and operating expense to r
 - All new recycling capacity introduced will be used for plastics.
 - If the capacity is built for recycling, it will be used by the public.
 - Expenses are different in each region.
+- There are known region specific observed values for mass of plastic waste recycled ($m_{recycling}$) and both the operating cost ($r_{opex}$) and capital expenditure ($r_{capex}$).
 
 \medskip
 <br>
@@ -51,11 +52,11 @@ $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{nonrecycling}} * \Delta_{recycling}$
 
 Note that investment is a mix of capital and operating expense:
 
-$r_{annual} = r_{annual-operating} + r_{capital} / 50$
+$r_{annual} = r_{annual-operating} + \frac{r_{capital}}{50}$
 
 This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
 
-$m_{increase} = I * r_{annual}$
+$m_{increase} = I * \frac{m_{recycling}}{r_{annual}}$
 
 See secondary effects for change to consumption.
 
