@@ -49,6 +49,14 @@ This delta is then offset for the non-recycling fates like so:
 
 $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{nonrecycling}} * \Delta_{recycling}$
 
+Note that investment is a mix of capital and operating expense:
+
+$r_{annual} = r_{annual-operating} + r_{capital} / 50$
+
+This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
+
+$m_{increase} = I * r_{annual}$
+
 See secondary effects for change to consumption.
 
 \bigskip

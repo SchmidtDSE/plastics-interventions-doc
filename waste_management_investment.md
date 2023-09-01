@@ -32,7 +32,15 @@ TODO (Nivedita / Elijah): Details on where the data come from.
 <br>
 
 # Primary impact
-This intervention assumes an change in the landfill ($m_{increase}$) changing over time:
+Investment is a mix of capital and operating expense:
+
+$r_{annual} = r_{annual-operating} + r_{capital} / 50$
+
+This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
+
+$m_{increase} = I * r_{annual}$
+
+With this potential change defined:
 
 $\Delta_{landfill} = min(m_{increase} * \%_{plastic}, W_{mismanaged})$
 
