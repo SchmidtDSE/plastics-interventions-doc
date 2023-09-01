@@ -8,12 +8,24 @@ Used in the scenario "Ban Polystyrene Packaging" on the first tab, this interven
 <br>
 <br>
 
-# Assumptions
+# Introduction
+This intervention does account for some knowledge external to the tool's model itself and it also makes a number of important assumptions that are often user-configurable.
+
+\medskip
+<br>
+
+## Assumptions
 
 - There is a known percent of polystyrene used in packaging ($\%_{packaging-PS}$).
 - The reduction is linear from 2024 to configurable end date (default of 2050).
 - The change in consumption to the change in waste generation is subject to lifecycle distribution delays.
 - The lifecycle duration for polystyrene is the same as the larger packaging consumption sector. 
+
+\medskip
+<br>
+
+## External knowledge
+The tool itself is not aware of the polymer and, instead, is only aware of the packaging sector. This uses the polystyrene distribution information from the underlying model as "external" constants.
 
 \bigskip
 <br>
@@ -57,16 +69,21 @@ Note that $\Delta_{import}$ comes from the region in which the intervention was 
 <br>
 <br>
 
-# Interactions
+# Discussion
+This technical note now turns to interactions and future work.
+
+\medskip
+<br>
+
+## Interactions
 This intervention may interact with others in multiple ways but the primary mechanisms are consumption and waste. First, this lever's reductions are visible in production and consumption-dependent interventions like minimum recycled content. For example, a cap on virgin production can use this lever as "credit" towards its goal before further reducing plastic generation to meet its target. Second, this does impact waste like the amount of recyclable material available for interventions like minimum recycled content. To that end, the reduction in available recycled material is visible for waste-dependent interventions including caps on different waste streams.
 
 In practice, this intervention places a constraint on production of plastics alongside the constraints considered by other interventions and the "strictest" constraint is the one that is ultimately reported. The same holds true for waste generation impact such that another intervention may "supersede" this lever if the materials being reduced by this intervention do not allow that other lever to achieve its goals.
 
-\bigskip
-<br>
+\medskip
 <br>
 
-# Future work
+## Future work
 
  - The labeling of this intervention is being adjusted to refer to polystyrene not expanded polystyrene.
  - Right now, all interventions assume the global average of 3.4% by mass for packaging is polystyrene but this may be adjusted to be region-specific.

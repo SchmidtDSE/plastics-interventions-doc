@@ -8,7 +8,13 @@ This intervention redirects waste from other end of life fates to recycling. It 
 <br>
 <br>
 
-# Assumptions
+# Introduction
+This intervention is mechanistic and does not use significant external literature support. Even still, it makes a number of important and often user configurable assumptions.
+
+\medskip
+<br>
+
+## Assumptions
 
 - There is a displacement rate $d$ which, though user configurable, is non-zero by default and describes how much of virgin plastic production is reduced or displaced by newly available recycled material.
 - Displacement rate $d$ may cause consumption to go up as a result of increased recycling: more recycled material is available but it does not fully offset existing production by the same amount, resulting in more plastics goods being made overall.
@@ -16,6 +22,12 @@ This intervention redirects waste from other end of life fates to recycling. It 
 - A lag is expected from when the recycling increases to when that newly recycled material is available for consumption (default of 1 year).
 - This intervention mandates a collection rate and not the actual amount of recycled plastics available for consumption.
 - There is a change from consumption to waste generation that is not immediate but, instead, governed by sector lifetime distributions.
+
+\medskip
+<br>
+
+## External knowledge
+This intervention does not use external literature to provide constants or other numbers beyond what is in the model itself.
 
 \bigskip
 <br>
@@ -94,12 +106,17 @@ This is time delayed based on the sector lifetime distributions of change in the
 <br>
 <br>
 
-# Interactions
+# Discussion
+This technical note now turns to interactions and future work.
+
+\medskip
+<br>
+
+## Interactions
 Though not fully exhaustive, this intervention interacts with others primarily through recycling rate and consumption. First, other interventions such as recycling investment may cause recycling to be higher than the minimum mandated by this policy. In practice, each intervention creates a minimum recycling rate and the maximum of those minimums is what is ultimately simulated such that all constraints are met. Second, this may influence consumption and that change is considered prior to consumption-dependent targets like minimum recycled content.
 
-\bigskip
-<br>
+\medskip
 <br>
 
-# Future work
+## Future work
 Further refinement of the assumed displacement rate.

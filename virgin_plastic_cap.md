@@ -8,12 +8,24 @@ This intervention imposes a maximum allowed amount of virgin plastic production.
 <br>
 <br>
 
-# Assumptions
+# Introduction
+This intervention is mechanistic and does not use significant external literature support. Even still, it makes a number of important and often user configurable assumptions.
+
+\medskip
+<br>
+
+## Assumptions
 
 - This intervention is assumed to have the maximum virgin plastic mandate go down from 2024 to the end date (2050 by default) linearlly.
 - There is some rate $b$ at which a reduction of x pounds in virgin plastic production is replaced by y increased recycling such that $b = \frac{y}{x}$. This is recycling "backfilling" lost virgin plastic production.
 - This cap applies to consumption so excludes exported plastic but includes imported plastic.
 - There is a delay from when the virgin plastic is banned to the impact on waste which is governed by the lifecycle distributions at the sector-level.
+
+\medskip
+<br>
+
+## External knowledge
+This intervention does not use external literature to provide constants or other numbers beyond what is in the model itself.
 
 \bigskip
 <br>

@@ -8,7 +8,13 @@ This intervention redirects waste from other end of life fates to recycling. It 
 <br>
 <br>
 
-# Assumptions
+# Introduction
+This intervention is mechanistic and does not use significant external literature support. Even still, it makes a number of important and often user configurable assumptions.
+
+\medskip
+<br>
+
+## Assumptions
 
 - There is some amount of material lost called "yield loss" or $l$ when recycling such that some material that is recycling waste is not available for the creation of new products.
 - Yield loss $l$ is 20% by default but is user configurable.
@@ -17,6 +23,12 @@ This intervention redirects waste from other end of life fates to recycling. It 
 - This intervention is assumed to have the minimum recycled content mandate go up gradually and linearlly from 2024 to the end date (2040 by default).
 - A lag is expected from waste to recycled plastic ready to be consumed again (default of 1 year).
 - The change in waste stream is expected to have a delay based on lifecycle distributions as described in other supplemental documentation.
+
+\medskip
+<br>
+
+## External knowledge
+This intervention does not use external literature to provide constants or other numbers beyond what is in the model itself.
 
 \bigskip
 <br>
@@ -95,30 +107,29 @@ Note that both that 1) this has no effect if $d = 0$ like in the default case an
 <br>
 <br>
 
-# Interactions
-This intervention interacts with other policy levers laterally within the same year and it also interacts with itself and others longitudinally through time. This section non-exhaustively explores those interactions.
+# Discussion
+This technical note now turns to interactions and future work.
 
 \medskip
 <br>
 
-## Other intervention interactions
+## Interactions
+This intervention interacts with other policy levers laterally within the same year and it also interacts with itself and others longitudinally through time. This section non-exhaustively explores those interactions.
+
+### Other intervention interactions
 One of this intervention's primary mechanisms is influencing recycling rates. After consumption has been modified by bans, taxes, and caps, this intervention arrives at a minimum amount of recycled material required to support consumption while maintaining the minimum recycled content goal. However, other interventions such as the recycling investment lever and the minimum recycling rate lever also arrive at their own minimum recycling rate.
 
 $W_{recycling} = max(W_{min-recycling})$
 
 These levers all effectively independently create a "constraint" such that the highest minimum recycling rate constraint is what is simulated. In other words, recycling will not drop because of these interventions but one recycling intervention may supersede another with a higher mandate such that all constraints are met.
 
-\medskip
-<br>
-
-## Time interactions
+### Time interactions
 This policy interacts with itself and others both forwards and backwards in time. First, it changes future distributions of waste based on the lifecycle distribution of the sectors impacted, represented as a delay to the start / end date of impact for when waste numbers are updated in the simulation when evaluating a year. Second, it also raises previous recycling rates in order to support current production, changing historic recycling due to the delay in recycled materials moving from waste to production. In other words, it both influences future distributions across end of life fates and, in order to source recycled material, also changes distirbutions across past end of life distributions. Like with interaction with other interventions, this acts effectively as a constraint so the intervention with the most strict constraint will prevail.
 
 See policy start / end date lever documentation for further discussion of managing timeseries effects and the lifecycle lever documentation for calculation of lifecycle delays.
 
-\bigskip
-<br>
+\medskip
 <br>
 
-# Future work
+## Future work
 Further conversation about the appropriate default $l$ and $d$.
