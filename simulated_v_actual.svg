@@ -28,7 +28,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.9477379"
-     inkscape:cx="228.72687"
+     inkscape:cx="229.7537"
      inkscape:cy="146.32359"
      inkscape:window-width="1920"
      inkscape:window-height="939"
@@ -82,8 +82,8 @@
          x="-39.714901"
          y="5.4979544">Value</tspan></text>
     <path
-       style="fill:none;fill-opacity:1;stroke:#1b9e77;stroke-width:0.793999;stroke-opacity:1;stroke-dasharray:0.79399902,2.38199705;stroke-dashoffset:0"
-       d="m 15.251926,67.5598 c 0,0 10.228468,-18.616175 19.255844,-22.788057 10.277529,-4.749624 23.823919,5.148967 33.96565,0.115893 8.495148,-4.215918 9.265743,-17.415196 17.128937,-22.717242 9.861196,-6.649272 34.464953,-9.23423 34.464953,-9.23423"
+       style="fill:none;fill-opacity:1;stroke:#1b9e77;stroke-width:0.793999;stroke-dasharray:0.793999, 2.382;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 15.251926,67.5598 c 0,0 9.668363,-18.013595 18.695739,-22.185477 C 44.225194,40.624699 65.590769,57.752265 75.7325,52.719191 84.227648,48.503273 81.316432,30.040098 89.179626,24.738052 99.040822,18.08878 120.06731,12.936164 120.06731,12.936164"
        id="path6423"
        sodipodi:nodetypes="csssc" />
     <path
