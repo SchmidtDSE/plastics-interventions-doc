@@ -52,7 +52,7 @@ $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{nonrecycling}} * \Delta_{recycling}$
 
 Note that investment is a mix of capital and operating expense:
 
-$r_{annual} = r_{annual-operating} + \frac{r_{capital}}{50}$
+$r_{annual} = r_{annual-opex} + \frac{r_{capex}}{50}$
 
 This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
 

@@ -35,7 +35,7 @@ TODO (Nivedita / Elijah): Details on where the data come from.
 # Primary impact
 Investment is a mix of capital and operating expense:
 
-$r_{annual} = r_{annual-operating} + \frac{r_{capital}}{50}$
+$r_{annual} = r_{annual-opex} + \frac{r_{capex}}{50}$
 
 This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
 
