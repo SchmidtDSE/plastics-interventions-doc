@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="300"
+   viewBox="0 0 132.29166 79.375"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="simulated_v_actual.svg"
+   inkscape:export-filename="simulated_v_actual.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.9477379"
+     inkscape:cx="229.7537"
+     inkscape:cy="146.32359"
+     inkscape:window-width="1920"
+     inkscape:window-height="939"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect6481"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.793999"
+       d="M 8.2755177,5.186123 V 72.301221 H 129.1095"
+       id="path236" />
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.793999"
+       x="37.37859"
+       y="77.17588"
+       id="text454"><tspan
+         sodipodi:role="line"
+         id="tspan452"
+         style="fill:#808080;fill-opacity:1;stroke-width:0.794"
+         x="37.37859"
+         y="77.17588">Years</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.793999"
+       x="-39.714901"
+       y="5.4979544"
+       id="text6265"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan6263"
+         style="fill:#808080;fill-opacity:1;stroke-width:0.794"
+         x="-39.714901"
+         y="5.4979544">Value</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#1b9e77;stroke-width:0.793999;stroke-dasharray:0.793999, 2.382;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 15.251926,67.5598 c 0,0 9.668363,-18.013595 18.695739,-22.185477 C 44.225194,40.624699 65.590769,57.752265 75.7325,52.719191 84.227648,48.503273 81.316432,30.040098 89.179626,24.738052 99.040822,18.08878 120.06731,12.936164 120.06731,12.936164"
+       id="path6423"
+       sodipodi:nodetypes="csssc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#7570b3;stroke-width:0.793999;stroke-opacity:1"
+       d="M 15.37521,67.655339 C 50.208205,49.427255 85.0411,31.199222 119.8739,12.97124"
+       id="path6479"
+       inkscape:path-effect="#path-effect6481"
+       inkscape:original-d="M 15.37521,67.655339 C 50.20837,49.427571 85.041265,31.199537 119.8739,12.97124" />
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#7570b3;fill-opacity:1;stroke:none;stroke-width:0.793999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="122.74506"
+       y="24.751657"
+       id="text7317"><tspan
+         sodipodi:role="line"
+         id="tspan7315"
+         style="fill:#7570b3;fill-opacity:1;stroke:none;stroke-width:0.794;stroke-dasharray:none"
+         x="122.74506"
+         y="24.751657">Simulated</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#1b9e77;fill-opacity:1;stroke:none;stroke-width:0.793999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="43.902348"
+       y="41.761044"
+       id="text7440"><tspan
+         sodipodi:role="line"
+         id="tspan7438"
+         style="fill:#1b9e77;fill-opacity:1;stroke:none;stroke-width:0.794;stroke-dasharray:none"
+         x="43.902348"
+         y="41.761044">Actual</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#7570b3;fill-opacity:1;stroke:none;stroke-width:0.793999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="46.001762"
+       y="65.364082"
+       id="text8442"><tspan
+         sodipodi:role="line"
+         id="tspan8440"
+         style="fill:#7570b3;fill-opacity:1;stroke:none;stroke-width:0.794;stroke-dasharray:none"
+         x="46.001762"
+         y="65.364082">Amortized</tspan></text>
+  </g>
+</svg>

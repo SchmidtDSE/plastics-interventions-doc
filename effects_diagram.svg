@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="500"
+   height="300"
+   viewBox="0 0 132.29166 79.375"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="effects_diagram.svg"
+   inkscape:export-filename="effects_diagram.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.9477379"
+     inkscape:cx="228.72687"
+     inkscape:cy="146.32359"
+     inkscape:window-width="1920"
+     inkscape:window-height="939"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#1b9e77;stroke-width:0.793999;stroke-opacity:1"
+       d="M 9.9825809,66.538593 54.6659,19.873184 h 65.63802"
+       id="path736" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.793999"
+       d="M 5.6296842,5.186123 V 72.301221 H 126.46365"
+       id="path236" />
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:none;stroke:none;stroke-width:0.793999"
+       x="89.610054"
+       y="77.17588"
+       id="text454"><tspan
+         sodipodi:role="line"
+         id="tspan452"
+         style="fill:#000000;stroke-width:0.794"
+         x="89.610054"
+         y="77.17588">Year Evaluated: 2040</tspan></text>
+    <path
+       style="fill:none;stroke:#d95f02;stroke-width:0.793999;stroke-opacity:1"
+       d="m 25.708057,66.538593 44.683319,-53.015409 49.921454,0"
+       id="path846"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#7570b3;stroke-width:0.793999;stroke-opacity:1"
+       d="M 38.937232,66.538593 83.620551,27.810684 h 36.163199"
+       id="path848"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.793999"
+       d="M 70.095128,71.165208 V 6.5970729"
+       id="path563" />
+    <circle
+       style="fill:#7570b3;fill-opacity:1;stroke:#000000;stroke-width:0.793999;stroke-opacity:1"
+       id="path3010"
+       cx="70.380592"
+       cy="39.430145"
+       r="2.023144" />
+    <circle
+       style="fill:#d95f02;fill-opacity:1;stroke:#000000;stroke-width:0.793999;stroke-opacity:1"
+       id="circle3288"
+       cx="70.380592"
+       cy="14.062616"
+       r="2.023144" />
+    <circle
+       style="fill:#1b9e77;fill-opacity:1;stroke:#000000;stroke-width:0.793999;stroke-opacity:1"
+       id="circle3566"
+       cx="70.380592"
+       cy="20.075022"
+       r="2.023144" />
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#1b9e77;fill-opacity:1;stroke:#000000;stroke-width:0.793999;stroke-opacity:1"
+       x="114.96132"
+       y="41.071293"
+       id="text3898"><tspan
+         sodipodi:role="line"
+         id="tspan3896"
+         style="fill:#000000;stroke:none;stroke-width:0.794"
+         x="114.96132"
+         y="41.071293">Effect 3 value for 2040</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#7570b3;fill-opacity:1;stroke:#000000;stroke-width:0.793999;stroke-opacity:1"
+       x="119.75918"
+       y="26.885338"
+       id="text3952"><tspan
+         sodipodi:role="line"
+         id="tspan3950"
+         style="fill:#7570b3;stroke:none;stroke-width:0.794;fill-opacity:1"
+         x="119.75918"
+         y="26.885338">Effect 3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#1b9e77;fill-opacity:1;stroke:#000000;stroke-width:0.793999;stroke-opacity:1"
+       x="119.87772"
+       y="18.94783"
+       id="text4094"><tspan
+         sodipodi:role="line"
+         id="tspan4092"
+         style="fill:#1b9e77;fill-opacity:1;stroke:none;stroke-width:0.794"
+         x="119.87772"
+         y="18.94783">Effect 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:4.23333px;font-family:'League Spartan';-inkscape-font-specification:'League Spartan Medium';text-align:end;text-anchor:end;fill:#d95f02;fill-opacity:1;stroke:#000000;stroke-width:0.793999;stroke-opacity:1"
+       x="118.86384"
+       y="12.597831"
+       id="text4355"><tspan
+         sodipodi:role="line"
+         id="tspan4353"
+         style="fill:#d95f02;fill-opacity:1;stroke:none;stroke-width:0.794"
+         x="118.86384"
+         y="12.597831">Effect 1</tspan></text>
+  </g>
+</svg>
