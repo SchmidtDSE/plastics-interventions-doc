@@ -18,10 +18,10 @@ This intervention relies on information about capital and operating expense to r
 
 - There is a displacement rate $d$ which, though user configurable, is non-zero by default and describes how much of virgin plastic production is reduced or displaced by newly available recycled material.
 - Displacement rate $d$ may cause consumption to go up as a result of increased recycling: more recycled material is available but it does not fully offset existing production by the same amount, resulting in more plastics goods being made overall.
-- This intervention is assumed to have recycling rate go up gradually and linearlly from 2024 to the end date (2050 by default).
+- This intervention is assumed to have recycling rate go up gradually and linearly from 2024 to the end date (2050 by default).
 - A lag is expected from when the recycling increases to when that newly recycled material is available for consumption (default of 1 year).
 - There is a change from consumption to waste generation that is not immediate but, instead, governed by sector lifetime distributions.
-- Capital expenditure is amoritzed over 50 years.
+- Capital expenditure is amortized over 50 years.
 - All new recycling capacity introduced will be used for plastics.
 - If the capacity is built for recycling, it will be used by the public.
 - Expenses are different in each region.
@@ -37,9 +37,13 @@ TODO (Nivedita / Elijah): Details on where the data come from.
 <br>
 
 # Primary impact
-This intervention assumes a recycling rate increase ($m_{increase}$) changing over time which can be used to define a change in recycling:
+This intervention assumes a recycling increase ($m_{increase}$) changing over time:
 
-$\Delta_{recycling} = W_{recycling} + min(m_{increase}, W_{non-recycling})$
+$\Delta_{recycling} = min(m_{increase}, W_{non-recycling})$
+
+This is applied to recycling:
+
+$W_{recycling} = W_{recycling} + \Delta_{recycling}$
 
 This delta is then offset for the non-recycling fates like so:
 
