@@ -8,7 +8,7 @@ This tool's interventions' often operate across multiple streams and stages of t
 <br>
 <br>
 
-# User controls
+# Policy dates
 The assumptions sections in the second "details" tab provide a number of controls which are often specific to a small number of interventions. However, all use policy start and policy complete dates. The user can change these controls within the tool to customize different policy scenarios.
 
 \medskip
