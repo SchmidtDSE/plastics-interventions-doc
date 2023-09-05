@@ -89,9 +89,9 @@ Absent additional information, this curve-fitting approach provides a reasonable
 
 |        | Percent Decrease | Tax per Article in USD Cents |
 |--------|------------------|------------------------------|
-| NAFTA  | 82%              | 10                           |
 | China  | 80%              | 7                            |
 | EU     | 95%              | 54                           |
+| NAFTA  | 82%              | 10                           |
 | RoW    | 90%              | 5                            |
 
 Therefore, the user receives a warning in the UI if they simulate tax levels above these tax levels and the scenarios shown to the user on the overview tab stay within sample.
