@@ -20,8 +20,9 @@ In addition to making assumptions within the modeling, this intervention relies 
 - The only change in consumption due to this intervention will be in the packaging space.
 - Decreases in consumption of plastic packaging will not cause appreciable increases in the consumption of other non-packaging plastic goods.
 - The behavior response to a tax on plastic packaging in general will be similar to the behavior response seen in a tax on plastic bags.
-- The tax rate $t$ will be different in different regions as will a fit model parameter $m$.
-- The tax rate $t$ is expressed as USD per article in all regions.
+- The tax rate $x$ will be different in different regions.
+- The tax rate $x$ is expressed as USD per article in all regions.
+- There is a fit function $y$ converting from $x$ to change in consumption.
 
 \medskip
 <br>
@@ -40,38 +41,67 @@ $C_{packaging} = C_{packaging} - \Delta_{packaging}$
 
 This delta is found through the following formula:
 
-$\Delta_{packaging} = \frac{\sqrt{t * m}}{s}$
+$\Delta_{packaging} = y(t) * C_{packaging}$
 
 This formula includes a mixture of parameters given by external literature and user configuration. Note that $\Delta_{packaging}$ requires propagation across waste and imports as described below.
 
 \medskip
 <br>
 
-## Non-linearity
-Though few data points are available, observed data typically show that, as taxes get higher, each marginal cent added to the tax yields diminishing reductions in consumption. This may be because some situations or products are harder to displace than others. To account for this observation, a square root is used in the formula.
+## Consumption impact modeling
+To determine the change in consumption function for a tax rate $y(t)$, a fit model is used.
 
-\medskip
-<br>
+### Non-linearity
+Though few data points are available, observed data show non-linearity. For example, consider the expected tax (USD cents) required to achieve 50% reduction in consumption by linearly extrapolating each region's low, middle, and high tax example.
 
-## Fitting
-The "middle" tax rate for each region is paired with an observed decrease in consumption. To fit a conversion factor $m$, this ratio of percent decrease in consumption over tax is scaled linearly to 50% decrease in consumption, a value typically well "within sample" for each region. This is used to derive scaling factor $m$ used above:
+|        | High  | Middle | Low  |
+|--------|-------|--------|------|
+| China  | 4.38  | 4.67   | 5.00 |
+| EU30   | 28.42 | 12.88  | 3.52 |
+| NAFTA  | 6.13  | 5.11   | 5.95 |
+| RoW    | 2.78  | 2.71   | 2.08 |
 
-$m = (\frac{0.5 * s}{\sqrt{t_m}})^2$
+Some regions like the EU30, in particular, show signs of large non-linearity. This may arise out of different price sensitivities and consumer behaviors that are regionally-specific.
 
-Here, $t_m$ is that linearly scaled tax rate at which a 50% reduction is expected. Note that there are very few data points per region and this isn't a proper regression but instead serves to capture that some regions have different price sensitivity than others.
+### Fit models
+All this in mind, the function $y$ has a number of expectations:
 
-\medskip
-<br>
+ - The function is only valid within a domain that maps to the range 0 to 1.
+ - The domain must be positive.
+ - The function needs to be monotonic in that range.
+ - A zero cent tax would result in no reduction in consumption.
+ - There’s evidence of non-linearity but potentially different degrees in different regions.
 
-## Scaling
-The largest percent reduction in consumption within a region is typically 80 to 90% and there's a question of how to treat predictions above this level where predictions are both out of sample in terms of behavior change in addition to being out of sample in terms of impacted products. This intervention allows the user to apply a scaling factor (defaults to 1 or no effect) which serves to further diminish the rate at which consumption is reduced above the 50% level.
+To meet these constraints, a curve is fit for $y(t) = max(min(t^a * b, 1), 0)$:
+
+|       | a    | b    |
+|-------|------|------|
+| China | 1.14 | 0.09 |
+| EU30  | 3.35 | 4.73 |
+| NAFTA | 0.83 | 0.12 |
+| RoW   | 0.86 | 0.22 |
+
+These result in the following curves:
+
+![Chart showing the default fit curves used in the tool for consumption tax impact.](tax_curves.png "Chart showing the default fit curves used in the tool for consumption tax impact")
+
+Absent additional information, this curve-fitting approach provides a reasonable starting point based on observed evidence. However, note that we remain skeptical about out of sample prediction. Consider the following "high" tax examples for each region:
+
+|        | Percent Decrease | Tax per Article in USD Cents |
+|--------|------------------|------------------------------|
+| NAFTA  | 82%              | 10                           |
+| China  | 80%              | 7                            |
+| EU     | 95%              | 54                           |
+| RoW    | 90%              | 5                            |
+
+Therefore, the user receives a warning in the UI if they simulate tax levels above these tax levels and the scenarios shown to the user on the overview tab stay within sample.
 
 \bigskip
 <br>
 <br>
 
 # Secondary impact
-The reduction in polystrene $\Delta_{packaging}$ is distributed proportionally across waste within the region:
+The reduction $\Delta_{packaging}$ is distributed proportionally across waste within the region:
 
 $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{packaging}$
 
@@ -102,8 +132,8 @@ This technical note now turns to performance as well as interactions and future 
 \medskip
 <br>
 
-## Performance
-The tool's tab 1 presents levels of taxation where moderate  results in an approximately 50% reduction in consumption. 
+## Model fit
+The model performance is likely poor on out of sample prediction given only three data points. This provides, however, a reasonable approximation absent other information.
 
 \medskip
 <br>
@@ -120,5 +150,5 @@ Of course, some bans also target specific subsets of packaging such as polystyre
 
 ## Future work
  - A different version of this intervention could look at price sensitivity curves for specific products and simulate at the product level instead of the sector level.
- - An actual regression could be performed if additional data points on behavior response to bans becomes available for each region.
- - A more appropriate scaling factor or $\Delta_{packaging}$ altogether could be derived from additional behavioral economics study or empirical human trials.
+ - A more sophisticated or accurate regression could be performed if additional data points on behavior response to bans becomes available for each region.
+ - A more $y(t)$ for $\Delta_{packaging}$ could be derived from additional behavioral economics study or empirical human trials.
