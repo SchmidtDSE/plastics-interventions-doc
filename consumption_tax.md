@@ -77,7 +77,7 @@ To meet these constraints, a curve is fit for $y(t) = max(min(t^a * b, 1), 0)$:
 |       | a    | b    |
 |-------|------|------|
 | China | 1.14 | 0.09 |
-| EU30  | 3.35 | 4.73 |
+| EU30  | 0.13 | 0.56 |
 | NAFTA | 0.83 | 0.12 |
 | RoW   | 0.86 | 0.22 |
 
