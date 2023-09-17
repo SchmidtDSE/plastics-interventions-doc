@@ -1,15 +1,15 @@
 ---
-title: Recycling Investment
+title: Max Mismanaged Rate
 numbersections: true
 ---
-This intervention increases the recycling rate by increasing capacity for collection, sorting, and processing. It is used by the "X Billion USD for Plastic Recycling" scenario.
+This intervention redirects waste to other end of life fates from mismanaged. At time of writing, it is not featured in the front page but is available in the details tab.
 
 \bigskip
 <br>
 <br>
 
 # Introduction
-This intervention relies on information about capital and operating expense to recycle a certain mass of plastics.
+This intervention is mechanistic and does not use significant external literature support. Even still, it makes a number of important and often user configurable assumptions.
 
 \medskip
 <br>
@@ -18,45 +18,32 @@ This intervention relies on information about capital and operating expense to r
 
 - There is a displacement rate $d$ which, though user configurable, is non-zero by default and describes how much of virgin plastic production is reduced or displaced by newly available recycled material.
 - Displacement rate $d$ may cause consumption to go up as a result of increased recycling: more recycled material is available but it does not fully offset existing production by the same amount, resulting in more plastics goods being made overall.
-- This intervention is assumed to have recycling rate go up gradually and linearly from a selectable start date to the configurable end date.
+- This intervention is assumed to have minimum recycling rate go up gradually and linearly from a selectable start date to the configurable end date.
 - A lag is expected from when the recycling increases to when that newly recycled material is available for consumption (default of 1 year).
 - There is a change from consumption to waste generation that is not immediate but, instead, governed by sector lifetime distributions.
-- Capital expenditure is amortized over 50 years.
-- All new recycling capacity introduced will be used for plastics.
-- If the capacity is built for recycling, it will be used by the public.
-- Expenses are different in each region.
-- There are known region specific observed values for mass of plastic waste recycled ($m_{recycling}$) and both the operating cost ($r_{opex}$) and capital expenditure ($r_{capex}$).
 
 \medskip
 <br>
 
 ## External knowledge
-TODO (Nivedita / Elijah): Details on where the data come from.
+This intervention does not use external literature to provide constants or other numbers beyond what is in the model itself.
 
 \bigskip
 <br>
 <br>
 
 # Primary impact
-This intervention assumes a recycling increase ($m_{increase}$) changing over time:
+This intervention assumes a maximum mismanaged rate mandate ($\%_{mandate}$) changing over time which can be used to define a change in recycling:
 
-$\Delta_{recycling} = min(m_{increase}, W_{non-recycling})$
+$\Delta_{mismanaged} = min(\frac{W_{mismanaged}}{w_{total}}, \%_{mandate}) * W_{total} - W_{mismanaged}$
 
-This is applied to recycling:
+This delta is then offset for the non-mismanaged fates like so:
 
-$W_{recycling} = W_{recycling} + \Delta_{recycling}$
+$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{nonmismanaged}} * \Delta_{mismanaged}$
 
-This delta is then offset for the non-recycling fates like so:
+Note that one of these changes is in recycling:
 
-$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{nonrecycling}} * \Delta_{recycling}$
-
-Note that investment is a mix of capital and operating expense:
-
-$r_{annual} = r_{annual-opex} + \frac{r_{capex}}{50}$
-
-This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
-
-$m_{increase} = I * \frac{m_{recycling}}{r_{annual}}$
+$\Delta_{recycling} = W_{recycling} - \frac{W_{recycling}}{W_{nonmismanaged}} * \Delta_{mismanaged}$
 
 See secondary effects for change to consumption.
 
@@ -113,7 +100,7 @@ This technical note now turns to interactions and future work.
 <br>
 
 ## Interactions
-Though not fully exhaustive, this intervention interacts with others primarily through recycling rate and consumption. First, other interventions such as minimum recycling rate may cause recycling to be higher than achieved by this policy alone. In practice, each intervention creates a minimum recycling rate and the maximum of those minimums is what is ultimately simulated such that all constraints are met. Second, this may influence consumption and that change is considered prior to consumption-dependent targets like minimum recycled content. For example, minimum recycled content may further increase recycling rates to meet consumption needs.
+Though not fully exhaustive, this intervention interacts with others primarily through recycling rate and consumption. First, other interventions such as recycling investment may cause mismanaged rate to be lower than the mandate. In practice, each intervention creates a maximum mismanaged rate and the minimum of those minimums is what is ultimately simulated such that all constraints are met. Second, this may influence consumption and that change is considered prior to consumption-dependent targets like minimum recycled content.
 
 \medskip
 <br>
