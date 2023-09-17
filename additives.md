@@ -1,8 +1,8 @@
 ---
-title: Reduce Packaging
+title: Reduce Additives
 numbersections: true
 ---
-Used in the scenarios "Ban Polystyrene Packaging" and "Reduce Single Use Packaging" on the first tab, this intervention reduces material and operates by simply subtracting consumption in packaging and sending that delta "onwards" to waste and trade.
+Used in the scenario "Reduce Additives" on the first tab, this intervention reduces material and operates by simply subtracting consumption and sending that delta "onwards" to waste and trade.
 
 \bigskip
 <br>
@@ -16,11 +16,10 @@ This intervention is mechanistic and does not use significant external literatur
 
 ## Assumptions
 
-- There is a known percent of polystyrene used in packaging ($\%_{packaging-PS}$).
-- There is a known percent of packaging which is single use ($\%_{packaging-SU}$).
+- There is a known percent of plastic products which are additives ($\%_{additives}$).
 - The reduction is linear from 2024 to configurable end date.
 - The change in consumption to the change in waste generation is subject to lifecycle distribution delays.
-- The lifecycle duration for polystyrene and single use packaging is the same as the larger packaging consumption sector. 
+- The lifecycle duration for additives is the same as the larger sector in which those additives are introduced to those sector's products. 
 
 \medskip
 <br>
@@ -35,23 +34,23 @@ This intervention does not use external literature to provide constants or other
 # Primary impact
 This intervention assumes an input percent reduction in consumption. The change to packaging becomes the following:
 
-$C_{packaging} = C_{packaging} - \Delta_{packaging}$
-$C_{packaging} = C_{packaging} - (C_{packaging} * (\%_{packaging-PS} * \%_{PS-reduction} + \%_{packaging-SU} * \%_{SU-reduction}))$
+$C = C - \Delta_{additives}$
+$C = C - C * \%_{additives} * \%_{additives-reduction}$
 
-Note that $\Delta_{packaging}$ requires propagation across waste and imports.
+Note that $\Delta_{additives}$ requires propagation across waste and imports.
 
 \bigskip
 <br>
 <br>
 
 # Secondary impact
-The reduction $\Delta_{packaging}$ is distributed proportionally across waste within the region:
+The reduction $\Delta_{additives}$ is distributed proportionally across waste within the region:
 
-$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{packaging}$
+$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{additives}$
 
 This change in waste is subject to lifecycle distribution delays. Note that imports also change as a result of reduced consumption:
 
-$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * \Delta_{packaging}$
+$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * \Delta_{additives}$
 
 Here $C$ is all input plastics (consumption) including domestic production and imports.
 
@@ -86,5 +85,4 @@ In practice, this intervention places a constraint on production of plastics alo
 
 ## Future work
 
- - This intervention does not distinguish between EPS and PS but future iterations may further sub-divide the products.
- - The defintion of "single use" is not canoncialized and may be adjusted in the future. Note that the user may override the percent of packaging that is single use within the tool under assumptions.
+This current implementation does not consider that reducing some additives may reduce certain products such that the volume overall reduced is larger than the additives themselves. That said, in pracitce, this may be counter-balanced by finding alternatives beyond the banned additives such that this effect is not seen.
