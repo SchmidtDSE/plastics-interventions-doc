@@ -16,7 +16,7 @@ This intervention relies on information about capital and operating expense to l
 
 ## Assumptions
 
-- This intervention is assumed to have landfill rate go up gradually and linearly from 2024 to the end date (2050 by default).
+- This intervention is assumed to have landfill rate go up gradually and linearly from a selectable start date to the configurable end date.
 - Capital expenditure is amortized over 50 years.
 - The expanded waste management capacity will be used for all waste types of which only a fraction is plastic ($\%_{plastic}$).
 - The addition of new waste management infrastructure will not redirect other end of life plastic fates to landfill except mismanaged.

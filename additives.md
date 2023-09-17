@@ -17,7 +17,7 @@ This intervention is mechanistic and does not use significant external literatur
 ## Assumptions
 
 - There is a known percent of plastic products which are additives ($\%_{additives}$).
-- The reduction is linear from 2024 to configurable end date.
+- The reduction is linear from a selectable start date to configurable end date.
 - The change in consumption to the change in waste generation is subject to lifecycle distribution delays.
 - The lifecycle duration for additives is the same as the larger sector in which those additives are introduced to those sector's products. 
 

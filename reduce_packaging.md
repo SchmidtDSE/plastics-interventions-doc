@@ -18,7 +18,7 @@ This intervention is mechanistic and does not use significant external literatur
 
 - There is a known percent of polystyrene used in packaging ($\%_{packaging-PS}$).
 - There is a known percent of packaging which is single use ($\%_{packaging-SU}$).
-- The reduction is linear from 2024 to configurable end date.
+- The reduction is linear from a selectable start date to the configurable end date.
 - The change in consumption to the change in waste generation is subject to lifecycle distribution delays.
 - The lifecycle duration for polystyrene and single use packaging is the same as the larger packaging consumption sector. 
 

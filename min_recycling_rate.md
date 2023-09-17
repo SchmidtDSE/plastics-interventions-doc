@@ -18,7 +18,7 @@ This intervention is mechanistic and does not use significant external literatur
 
 - There is a displacement rate $d$ which, though user configurable, is non-zero by default and describes how much of virgin plastic production is reduced or displaced by newly available recycled material.
 - Displacement rate $d$ may cause consumption to go up as a result of increased recycling: more recycled material is available but it does not fully offset existing production by the same amount, resulting in more plastics goods being made overall.
-- This intervention is assumed to have minimum recycling rate go up gradually and linearly from 2024 to the end date (2050 by default).
+- This intervention is assumed to have minimum recycling rate go up gradually and linearly from a selectable start date to the configurable end date.
 - A lag is expected from when the recycling increases to when that newly recycled material is available for consumption (default of 1 year).
 - This intervention mandates a collection rate and not the actual amount of recycled plastics available for consumption.
 - There is a change from consumption to waste generation that is not immediate but, instead, governed by sector lifetime distributions.

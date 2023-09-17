@@ -20,7 +20,7 @@ This intervention is mechanistic and does not use significant external literatur
 - Yield loss $l$ is 20% by default but is user configurable.
 - There is a displacement rate $d$ which describes at what rate consumption goes down, allowing the simulation to meet this mandate by reduced consumption instead of increasing recycling. This may, for example, reflect shifting to other non-plastic materials.
 - Though user configurable, $d$ is set to zero by default meaning that there is no loss in consumption.
-- This intervention is assumed to have the minimum recycled content mandate go up gradually and linearlly from 2024 to the end date (2040 by default).
+- This intervention is assumed to have the minimum recycled content mandate go up gradually and linearlly from a selectable start date to a configurable end date.
 - A lag is expected from waste to recycled plastic ready to be consumed again (default of 1 year).
 - The change in waste stream is expected to have a delay based on lifecycle distributions as described in other supplemental documentation.
 

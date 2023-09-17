@@ -16,7 +16,7 @@ This intervention relies on information about capital and operating expense to i
 
 ## Assumptions
 
-- This intervention is assumed to have incineration rate go up gradually and linearly from 2024 to the end date (2050 by default).
+- This intervention is assumed to have incineration rate go up gradually and linearly from a selectable start date to the configurable end date.
 - Capital expenditure is amortized over 50 years.
 - The expanded capacity will be used for all waste types of which only a fraction is plastic ($\%_{plastic}$).
 - The addition of new infrastructure will redirect landfill and mismanaged to incineration.
