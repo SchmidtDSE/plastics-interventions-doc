@@ -1,8 +1,8 @@
 ---
-title: Reduce Polystyrene
+title: Reduce Packaging
 numbersections: true
 ---
-Used in the scenario "Ban Polystyrene Packaging" on the first tab, this intervention reduces material and operates by simply subtracting consumption in packaging and sending that delta "onwards" to waste and trade.
+Used in the scenarios "Ban Polystyrene Packaging" and "Reduce Single Use Packaging" on the first tab, this intervention reduces material and operates by simply subtracting consumption in packaging and sending that delta "onwards" to waste and trade.
 
 \bigskip
 <br>
@@ -17,9 +17,10 @@ This intervention is mechanistic and does not use significant external literatur
 ## Assumptions
 
 - There is a known percent of polystyrene used in packaging ($\%_{packaging-PS}$).
+- There is a known percent of packaging which is single use ($\%_{packaging-SU}$).
 - The reduction is linear from 2024 to configurable end date (default of 2050).
 - The change in consumption to the change in waste generation is subject to lifecycle distribution delays.
-- The lifecycle duration for polystyrene is the same as the larger packaging consumption sector. 
+- The lifecycle duration for polystyrene and single use packaging is the same as the larger packaging consumption sector. 
 
 \medskip
 <br>
@@ -32,25 +33,25 @@ This intervention does not use external literature to provide constants or other
 <br>
 
 # Primary impact
-This intervention assumes an input percent reduction in polystyrene consumption and has access to the percent of packaging that uses that polymer (~3.4% by default) by mass. The change to packaging becomes the following:
+This intervention assumes an input percent reduction in consumption. The change to packaging becomes the following:
 
-$C_{packaging} = C_{packaging} - \Delta_{PS}$
-$C_{packaging} = C_{packaging} - (C_{packaging} * \%_{packaging-PS} * \%_{PS-reduction})$
+$C_{packaging} = C_{packaging} - \Delta_{packaging}$
+$C_{packaging} = C_{packaging} - (C_{packaging} * (\%_{packaging-PS} * \%_{PS-reduction} + \%_{packaging-SU} * \%_{SU-reduction}))$
 
-Note that $\Delta_{PS}$ requires propagation across waste and imports.
+Note that $\Delta_{packaging}$ requires propagation across waste and imports.
 
 \bigskip
 <br>
 <br>
 
 # Secondary impact
-The reduction in polystrene $\Delta_{PS}$ is distributed proportionally across waste within the region:
+The reduction $\Delta_{packaging}$ is distributed proportionally across waste within the region:
 
-$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{PS}$
+$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{packaging}$
 
 This change in waste is subject to lifecycle distribution delays. Note that imports also change as a result of reduced consumption:
 
-$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * \Delta_{PS}$
+$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * \Delta_{packaging}$
 
 Here $C$ is all input plastics (consumption) including domestic production and imports.
 
@@ -86,4 +87,3 @@ In practice, this intervention places a constraint on production of plastics alo
 ## Future work
 
  - The labeling of this intervention is being adjusted to refer to polystyrene not expanded polystyrene.
- - Right now, all interventions assume the global average of 3.4% by mass for packaging is polystyrene but this may be adjusted to be region-specific.
