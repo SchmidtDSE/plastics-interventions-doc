@@ -26,7 +26,7 @@ This intervention relies on information about capital and operating expense to i
 <br>
 
 ## External knowledge
-TODO (Nivedita / Elijah): Details on where the data come from.
+This uses materials describing capital and operating expenditures for incineration facilities [@Lau].
 
 \bigskip
 <br>
