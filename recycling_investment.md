@@ -1,7 +1,6 @@
 ---
 title: Recycling Investment
 numbersections: true
-bibliography: sources.bib
 ---
 This intervention increases the recycling rate by increasing capacity for collection, sorting, and processing. It is used by the "X Billion USD for Plastic Recycling" scenario.
 

@@ -1,5 +1,5 @@
 mkdir pdfs/
 for file in *.md; do
     output_file="pdfs/$(basename $file .md).pdf"
-    pandoc --biblatex --biblography=/data/sources.bub --output=/data/$output_file /data/$file
+    pandoc --biblatex --output=$output_file --bibliography=sources.bib $file
 done

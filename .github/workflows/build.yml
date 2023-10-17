@@ -15,6 +15,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Pandoc
         run: sudo apt-get install pandoc
+      - name: Install Latex
+        run: sudo apt-get install texlive-latex-recommended
+      - name: Install Biber
+        run: sudo apt-get install texlive-bibtex-extra biber
       - name: Convert Markdown to PDF
         run: bash build.sh
       - name: Nest zip
