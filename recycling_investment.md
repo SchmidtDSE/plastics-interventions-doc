@@ -1,6 +1,7 @@
 ---
 title: Recycling Investment
 numbersections: true
+bibliography: sources.bib
 ---
 This intervention increases the recycling rate by increasing capacity for collection, sorting, and processing. It is used by the "X Billion USD for Plastic Recycling" scenario.
 
@@ -31,7 +32,7 @@ This intervention relies on information about capital and operating expense to r
 <br>
 
 ## External knowledge
-This uses materials describing capital and operating expenditures for recycling facilities [@Lau].
+This uses materials describing capital and operating expenditures for recycling facilities [@lau2020].
 
 \bigskip
 <br>
@@ -120,3 +121,9 @@ Though not fully exhaustive, this intervention interacts with others primarily t
 
 ## Future work
 Further refinement of the assumed displacement rate.
+
+\bigskip
+<br>
+<br>
+
+# Works Cited
