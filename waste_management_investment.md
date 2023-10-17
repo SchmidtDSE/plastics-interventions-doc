@@ -68,3 +68,9 @@ There are no further assumed effects.
 
 # Discussion
 Future work includes additional investigation into if increased landfill capacity impacts fates other than mismanaged.
+
+\bigskip
+<br>
+<br>
+
+# Works Cited
