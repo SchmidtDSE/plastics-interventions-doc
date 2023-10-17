@@ -28,7 +28,7 @@ In addition to making assumptions within the modeling, this intervention relies 
 <br>
 
 ## External knowledge
-TODO (Nivedita / Elijah): Details on where the data come from.
+This considers a variety of data sources on existing packaging consumption taxes. Specifically, note that there have been multiple examples types of taxes applied to single use plastic items like plastic bags across regions [@carr2020; @vdeq; @montgomery; @chicago; @maine; @boland2020; @wang2022; @anastasio2022; @uk2021; @licollari2023; @agencia; @ey]. Though information is available on multiple types of taxes, this intervention gives particular attention to plastic bag taxes paid by consumers.
 
 \bigskip
 <br>
