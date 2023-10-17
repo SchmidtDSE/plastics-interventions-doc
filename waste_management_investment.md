@@ -26,7 +26,7 @@ This intervention relies on information about capital and operating expense to l
 <br>
 
 ## External knowledge
-This uses materials describing capital and operating expenditures for landfill [@Lau].
+This uses materials describing capital and operating expenditures for landfill [@lau2020].
 
 \bigskip
 <br>

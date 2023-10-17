@@ -18,11 +18,11 @@ These can be reviewed in the "more information" sections for each lever in the [
 
 Environment Setup
 --------------------------------------------------------------------------------
-It is recommended that these are built through [Pandoc](https://pandoc.org/) though any tool which can process Markdown files can be used. If using Pandoc, after installation simply run `bash build.sh` after installation. Note that the default build also requires Latex:
+It is recommended that these are built through [Pandoc](https://pandoc.org/) though any tool which can process Markdown files can be used. If using Pandoc, after installation simply run `bash build.sh` after installation. Note that the default build also requires Latex. In Ubuntu:
 
- - texlive-latex-recommended
- - texlive-bibtex-extra
- - biber
+```
+sudo apt-get install pandoc pandoc-citeproc texlive-extra-utils texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-bibtex-extra biber
+```
 
 <br>
 
