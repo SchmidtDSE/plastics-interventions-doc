@@ -152,3 +152,9 @@ Of course, some bans also target specific subsets of packaging such as polystyre
  - A different version of this intervention could look at price sensitivity curves for specific products and simulate at the product level instead of the sector level.
  - A more sophisticated or accurate regression could be performed if additional data points on behavior response to bans becomes available for each region.
  - A more $y(t)$ for $\Delta_{packaging}$ could be derived from additional behavioral economics study or empirical human trials.
+
+\bigskip
+<br>
+<br>
+
+# Works Cited
