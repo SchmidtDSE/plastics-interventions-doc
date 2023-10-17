@@ -89,6 +89,12 @@ $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{recycling} * (1 - d)
 
 This is time delayed based on the sector lifetime distributions of change in the consumption.
 
+\medskip
+<br>
+
+## Waste trade
+Note one of the end of life fates impacted is waste trade and other regions experience secondary effects in the simulation (see waste trade interventions).
+
 \bigskip
 <br>
 <br>

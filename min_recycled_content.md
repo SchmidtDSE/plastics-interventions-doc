@@ -101,7 +101,7 @@ Due to change in imports, the following change is expected across exports from o
 
 $T_{region-export} = T_{region-export} - \frac{T_{region-export}}{T_{total-export}} * \Delta_{import}$
 
-Note that both that 1) this has no effect if $d = 0$ like in the default case and 2) $\Delta_{import}$ comes from the region in which the intervention was introduced.
+Note that both that 1) this has no effect if $d = 0$ like in the default case and 2) $\Delta_{import}$ comes from the region in which the intervention was introduced. Furthermore, one of the end of life fates impacted is waste trade and other regions experience secondary effects in the simulation (see waste trade interventions).
 
 \bigskip
 <br>
