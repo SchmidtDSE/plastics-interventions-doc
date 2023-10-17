@@ -26,7 +26,7 @@ This intervention relies on information about capital and operating expense to i
 <br>
 
 ## External knowledge
-TODO (Nivedita / Elijah): Details on where the data come from.
+This uses materials describing capital and operating expenditures for incineration facilities [@lau2020].
 
 \bigskip
 <br>
@@ -72,3 +72,9 @@ There are no further assumed effects.
 
 # Discussion
 Future work includes additional investigation into how additional incineration capacity impacts other end of life plastic fates. Note that this intervention reflects an implicit belief that incineration is a preferred outcome to landfill. To that end, users may choose to direct investment only to landfill through the second tab if they disagree with this perspective.
+
+\bigskip
+<br>
+<br>
+
+# Works Cited

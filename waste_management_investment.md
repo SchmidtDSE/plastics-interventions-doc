@@ -26,7 +26,7 @@ This intervention relies on information about capital and operating expense to l
 <br>
 
 ## External knowledge
-TODO (Nivedita / Elijah): Details on where the data come from.
+This uses materials describing capital and operating expenditures for landfill [@lau2020].
 
 \bigskip
 <br>
@@ -68,3 +68,9 @@ There are no further assumed effects.
 
 # Discussion
 Future work includes additional investigation into if increased landfill capacity impacts fates other than mismanaged.
+
+\bigskip
+<br>
+<br>
+
+# Works Cited
