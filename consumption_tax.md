@@ -120,7 +120,7 @@ As imports have changed, exports from other countries will reduce as well:
 
 $T_{region-export} = T_{region-export} - \frac{T_{region-export}}{T_{total-export}} * \Delta_{import}$
 
-Note that $\Delta_{import}$ comes from the region in which the intervention was introduced.
+Note that $\Delta_{import}$ comes from the region in which the intervention was introduced. Furthermore, one of the end of life fates impacted is waste trade and other regions experience secondary effects in the simulation (see waste trade interventions).
 
 \bigskip
 <br>
