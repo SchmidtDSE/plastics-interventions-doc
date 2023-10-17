@@ -2,7 +2,7 @@
 title: Virgin Plastic Cap
 numbersections: true
 ---
-This intervention imposes a maximum allowed amount of virgin plastic production. It is used in the "Cap to 2030 Virgin Production" scenario.
+This intervention imposes a maximum allowed amount of virgin plastic production. It is used in the "Cap to 2025 Virgin Production" scenario.
 
 \bigskip
 <br>
