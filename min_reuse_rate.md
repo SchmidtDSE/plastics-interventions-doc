@@ -1,5 +1,5 @@
 ---
-title: Min Reuse Rate
+title: Minimum Reuse Rate
 numbersections: true
 ---
 This intervention extends the lifecycle duration of products, reducing consumption and waste in the process.
@@ -16,10 +16,10 @@ This intervention is mechanistic and does not use significant external literatur
 
 ## Assumptions
 
-- The user provides an estimation of what percent of products in a sector are mandated to become reusable ($%\_{mandate}$).
-- There is some expected rate at which those products retire ($r$) when they would have otherwise reached end of life.
+- The user provides an estimation of what percent of products in a sector are mandated to become reusable ($\%_{mandate}$).
+- Though reuse extends end of life, there is some expected rate at which those products retire ($r$).
 - Goods which are reused are recycled when they are retired.
-- There is some lost consumption rate ($l$) caused by the intervention like through price increase though this is assumed to be zero by default.
+- Like through price increase, there is some lost consumption rate ($l$) caused by the intervention though this is assumed to be zero by default.
 
 \medskip
 <br>
@@ -32,10 +32,10 @@ This intervention does not use external literature to provide constants or other
 <br>
 
 # Primary impact
-Though $l$ is set to zero by default, this intervention assumes a minimum reuse mandate changing over time which serves primarily to reduce consumption as follows.
+This intervention assumes a minimum reuse mandate changing over time which serves primarily to reduce consumption as follows.
 
 ## Reduction of consumption
-Starting with the effect of consumption:
+Starting with the effect of consumption, the following occurs in repetition longitudinally:
 
 $C_{sector} = C_{sector} - \Delta_{reuse}$
 
@@ -57,7 +57,7 @@ Note that this causes a change in fate ratios.
 <br>
 
 # Secondary impact
-The decrease in consumption causes a reduction in waste and trade, following the delay as described above.
+The decrease in consumption causes a reduction in waste and trade.
 
 \medskip
 <br>
@@ -75,9 +75,9 @@ Note that this incurs GHG implications for not just consumption but also waste.
 ## Reduction in trade
 Imports are reduced due to loss in consumption:
 
-$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * \Delta_{reuse} * d$
+$T_{import} = T_{import} - \frac{T_{import}}{C_{total}} * \Delta_{reuse}$
 
-This additional consumption has tertiary effects on exports from other regions. By default, with $d = 0$, no change is actually made in this step.
+This additional consumption has tertiary effects on exports from other regions.
 
 \bigskip
 <br>
@@ -95,7 +95,7 @@ Note that this incurs an effect on GHG in exporter regions.
 <br>
 
 # Discussion
-This technical note now turns to interactions and future work.
+This technical note now turns to interactions and time delays before discussing future work.
 
 \medskip
 <br>
@@ -104,7 +104,7 @@ This technical note now turns to interactions and future work.
 One of this intervention's primary mechanisms is influencing consumption. After consumption has been modified by bans, taxes, and caps, this intervention arrives at a mass displacement which has effects across all EOL fates but disproportionately in non-recycling. Therefore, this intervention must be considered prior to recycling constraints.
 
 ## Time delays
-Note that these impacts happen in the future after the reusable product enters consumption. In other words, these consumption effects are delayed both by policy start of phase in and, to identify the future products displaced, the lifecycle of the products had they not been reusable.
+Note that these impacts happen in the future after the reusable product enters consumption. In other words, these consumption effects are delayed both by policy start of phase in and, to identify the future products displaced, the lifecycle of the products had they not been reusable. In practice, this intervention expects this time displacement of lifecycle duration.
 
 \medskip
 <br>
