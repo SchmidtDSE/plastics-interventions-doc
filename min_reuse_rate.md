@@ -1,5 +1,5 @@
 ---
-title: Minimum Reuse Rate
+title: Min Reuse Rate
 numbersections: true
 ---
 This intervention extends the lifecycle duration of products, reducing consumption and waste in the process.
