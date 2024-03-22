@@ -20,7 +20,7 @@ This intervention is mechanistic and does not use significant external literatur
 - Though reuse extends end of life, there is some expected rate at which those products retire ($r$).
 - Goods which are reused are recycled when they are retired.
 - Like through price increase, there is some lost consumption rate ($l$) caused by the intervention though this is assumed to be zero by default.
-- There is some marginal percentage increase $x$ in material consumption to support reusable products.
+- There is some marginal percentage increase $x$ in material consumption to support reusable products. See web application for default values.
 
 \medskip
 <br>
