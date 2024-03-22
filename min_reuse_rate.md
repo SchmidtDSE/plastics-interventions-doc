@@ -20,6 +20,7 @@ This intervention is mechanistic and does not use significant external literatur
 - Though reuse extends end of life, there is some expected rate at which those products retire ($r$).
 - Goods which are reused are recycled when they are retired.
 - Like through price increase, there is some lost consumption rate ($l$) caused by the intervention though this is assumed to be zero by default.
+- There is some marginal percentage increase $x$ in material consumption to support reusable products.
 
 \medskip
 <br>
@@ -35,13 +36,15 @@ This intervention does not use external literature to provide constants or other
 This intervention assumes a minimum reuse mandate changing over time which serves primarily to reduce consumption as follows.
 
 ## Reduction of consumption
-Starting with the effect of consumption, the following occurs in repetition longitudinally:
+Starting with the effect of consumption, the following occurs in repetition longitudinally where $\Delta_{reuse}$ refers to drop in consumption due to reuse but $\Delta_{product}$ refers to increase material usage in products to support reusability:
 
-$C_{sector} = C_{sector} - \Delta_{reuse}$
+$C_{sector} = C_{sector} - \Delta_{reuse} + \Delta_{product}$
 
-$C_{sector} = C_{sector} - (C_{sector} * \%_{mandate} * (1 - r) - l * C_{sector} * \%_{mandate})$
+$C_{sector} = C_{sector} - (C_{sector} * \%_{mandate} * (1 - r) + l * C_{sector} * \%_{mandate}) + (C_{sector} * \%_{mandate} - l * C_{sector} * \%_{mandate}) * x$
 
-$C_{sector} = C_{sector} * (1 - \%_{mandate} * (1 - r) - l * \%_{mandate})$
+$C_{sector} = C_{sector} * (1 - \%_{mandate} * (1 - r) - l * \%_{mandate} + \%_{mandate} * x - l * \%_{mandate} * x)$
+
+$C_{sector} = C_{sector} * (1 + \%_{mandate} * (x + r - 1) - (1 + x) * l * \%_{mandate})$
 
 This has secondary effects on waste and trade as described below.
 
