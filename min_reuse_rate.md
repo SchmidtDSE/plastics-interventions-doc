@@ -17,7 +17,7 @@ This intervention is mechanistic and does not use significant external literatur
 ## Assumptions
 
 - The user provides an estimation of what percent of products in a sector are mandated to become reusable ($\%_{mandate}$).
-- Though reuse extends end of life, there is some expected rate at which those products retire ($r$).
+- Though reuse extends end of life, there is some expected rate at which those products retire ($r$).$.
 - Goods which are reused are recycled when they are retired.
 - Like through price increase, there is some lost consumption rate ($l$) caused by the intervention though this is assumed to be zero by default.
 - There is some marginal percentage increase $x$ in material consumption to support reusable products. See web application for default values.
@@ -48,7 +48,7 @@ $C_{sector} = C_{sector} * (1 + \%_{mandate} * (x + r - 1) - (1 + x) * l * \%_{m
 
 This has secondary effects on waste and trade as described below.
 
-## Returement
+## Retirement
 Of course, these goods do not last forever and some product retirement into recycling is expected:
 
 $W_{recycling} = W_{recycling} + \%_{mandate} * r * C_{sector}$
@@ -109,8 +109,11 @@ One of this intervention's primary mechanisms is influencing consumption. After 
 ## Time delays
 Note that these impacts happen in the future after the reusable product enters consumption. In other words, these consumption effects are delayed both by policy start of phase in and, to identify the future products displaced, the lifecycle of the products had they not been reusable. In practice, this intervention expects this time displacement of lifecycle duration.
 
-\medskip
-<br>
+## Candidate products
+The intervention so far applies to all products in a sector but not all goods may be made reusable like in medical applications. Therefore, in practice, the web application also exposes a parameter for percent of goods which are candidates to be made reusable.
 
 ## Future work
-This intervention is sensitive to the retirement rate and may require further investigation, especially for non-packaging products.
+This intervention is sensitive to the retirement rate and marignal added material usage, both of which may require further investigation, especially for non-packaging products.
+
+\medskip
+<br>
