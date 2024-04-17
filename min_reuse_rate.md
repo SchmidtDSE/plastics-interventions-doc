@@ -112,8 +112,8 @@ Note that these impacts happen in the future after the reusable product enters c
 ## Candidate products
 The intervention so far applies to all products in a sector but not all goods may be made reusable like in medical applications. Therefore, in practice, the web application also exposes a parameter for percent of goods which are candidates to be made reusable.
 
-\medskip
-<br>
-
 ## Future work
 This intervention is sensitive to the retirement rate and marignal added material usage, both of which may require further investigation, especially for non-packaging products.
+
+\medskip
+<br>
