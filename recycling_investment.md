@@ -55,7 +55,7 @@ Note that investment is a mix of capital and operating expense:
 
 $r_{annual} = r_{annual-opex} + \frac{r_{capex}}{50}$
 
-This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
+This intervention assumes a potential change in the recycling ($m_{increase}$) over time based on an investment $I$:
 
 $m_{increase} = I * \frac{m_{recycling}}{r_{annual}}$
 
