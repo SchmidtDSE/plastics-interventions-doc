@@ -35,9 +35,9 @@ This intervention assumes a maximum virgin plastic amount ($M_{mandate}$) changi
 
 $\Delta_{required} = P_{primary} - min(P_{primary}, M_{mandate})$
 
-The intervention first tries to increase recycling to compensate:
+The intervention first tries to increase recycling to compensate up until a configurable backfill rate ($b$):
 
-$\Delta_{secondary} = min(W_{non-recycling}, \Delta_{required})$
+$\Delta_{secondary} = min(W_{non-recycling}, \Delta_{required}) * b$
 
 This reflects into production:
 
