@@ -66,7 +66,7 @@ The decrease in consumption causes a reduction in waste and trade.
 <br>
 
 ## Change in waste
-First, the change in recycling canibalizes other waste fates. Starting with recycling itself:
+First, the change in recycling cannibalizes other waste fates. Starting with recycling itself:
 
 $W_{recycling} = W_{recycling} + \frac{\Delta_{secondary}}{l}$
 
