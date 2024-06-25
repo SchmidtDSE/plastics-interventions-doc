@@ -19,6 +19,8 @@ This intervention is mechanistic and does not use significant external literatur
 - This intervention is assumed to have the maximum virgin plastic mandate go down from a selectable start date to the configurable end date linearlly.
 - This cap applies to consumption so excludes exported plastic but includes imported plastic.
 - There is a delay from when the virgin plastic is banned to the impact on waste which is governed by the lifecycle distributions at the sector-level.
+- There is a rate at which lost virgin production is backfilled by increased recycling ($b$).
+- There is a yield loss rate ($l$) for conversion of end of life recycling into secondary production.
 
 \medskip
 <br>
@@ -35,9 +37,9 @@ This intervention assumes a maximum virgin plastic amount ($M_{mandate}$) changi
 
 $\Delta_{required} = P_{primary} - min(P_{primary}, M_{mandate})$
 
-The intervention first tries to increase recycling to compensate:
+The intervention first tries to increase recycling to compensate up until a configurable backfill rate ($b$):
 
-$\Delta_{secondary} = min(W_{non-recycling}, \Delta_{required})$
+$\Delta_{secondary} = min(W_{non-recycling} * l, \Delta_{required} * b)$
 
 This reflects into production:
 
@@ -66,11 +68,11 @@ The decrease in consumption causes a reduction in waste and trade.
 ## Change in waste
 First, the change in recycling canibalizes other waste fates. Starting with recycling itself:
 
-$W_{recycling} = W_{recycling} + \Delta_{secondary}$
+$W_{recycling} = W_{recycling} + \frac{\Delta_{secondary}}{l}$
 
 Then, updating the others:
 
-$W_{fate} = \frac{W_{fate}}{W_{non-recycling}} * \Delta_{secondary}$
+$W_{fate} = \frac{W_{fate}}{W_{non-recycling}} * \frac{\Delta_{secondary}}{l}$
 
 Next, the change in consumption is propagated across all waste fates.
 
