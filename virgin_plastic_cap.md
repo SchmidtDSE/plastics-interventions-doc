@@ -31,9 +31,21 @@ This intervention does not use external literature to provide constants or other
 <br>
 
 # Primary impact
-This intervention assumes a maximum virgin plastic amount ($M_{mandate}$) changing over time. This leads to a certain change to consumption:
+This intervention assumes a maximum virgin plastic amount ($M_{mandate}$) changing over time. This leads to a requirement for a change in primary production:
 
-$\Delta_{consumption} = C_{total} - min(C_{total}, M_{mandate})$
+$\Delta_{required} = P_{primary} - min(P_{primary}, M_{mandate})$
+
+The intervention first tries to increase recycling to compensate:
+
+$\Delta_{secondary} = min(W_{non-recycling}, \Delta_{required})$
+
+This reflects into production:
+
+$P_{secondary} = P_{secondary} + \Delta_{secondary}$
+
+In practice, the simulation takes time delays between end of life and production into account. Anyway, in the event that not enough recycling is available, consumption sees a change:
+
+$\Delta_{consumption} = \Delta_{required} - \Delta_{secondary}$
 
 The change is distributed across consumption sectors like so:
 
@@ -51,8 +63,16 @@ The decrease in consumption causes a reduction in waste and trade.
 \medskip
 <br>
 
-## Reduction in waste
-The change in consumption is propagated across all waste fates.
+## Change in waste
+First, the change in recycling canibalizes other waste fates. Starting with recycling itself:
+
+$W_{recycling} = W_{recycling} + \Delta_{secondary}$
+
+Then, updating the others:
+
+$W_{fate} = \frac{W_{fate}}{W_{non-recycling}} * \Delta_{secondary}$
+
+Next, the change in consumption is propagated across all waste fates.
 
 $W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{consumption}$
 
