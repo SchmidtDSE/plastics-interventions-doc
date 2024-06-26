@@ -36,7 +36,7 @@ This intervention does not use external literature to provide constants or other
 # Primary impact
 This intervention assumes a minimum recycling rate mandate ($\%_{mandate}$) changing over time which can be used to define a change in recycling:
 
-$\Delta_{recycling} = W_{recycling} - min(\frac{W_{recycling}}{W_{total}}, \%_{mandate}) * W_{total}$
+$\Delta_{recycling} = max(W_{recycling}, \%_{mandate} * W_{total}) - W_{recycling}$
 
 This delta is then offset for the non-recycling fates like so:
 
