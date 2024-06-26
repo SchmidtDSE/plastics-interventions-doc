@@ -52,11 +52,9 @@ This simply distributes new waste assuming the same fate propensities as prior w
 <br>
 
 ## Reduction in waste
-The change in consumption is propagated across all waste fates.
+The change in exports is propagated across all waste fates in the source.
 
-$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{consumption}$
-
-This impact is time delayed based on the distribution of the change to consumption across sectors.
+$W_{fate} = W_{fate} - \frac{W_{fate}}{W_{total}} * \Delta_{region-export}$
 
 \bigskip
 <br>
