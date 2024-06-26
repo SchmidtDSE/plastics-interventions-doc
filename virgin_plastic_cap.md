@@ -72,7 +72,7 @@ $W_{recycling} = W_{recycling} + \frac{\Delta_{secondary}}{l}$
 
 Then, updating the others:
 
-$W_{fate} = \frac{W_{fate}}{W_{non-recycling}} * \frac{\Delta_{secondary}}{l}$
+$W_{fate} = W_{fate} + \frac{W_{fate}}{W_{non-recycling}} * \frac{\Delta_{secondary}}{l}$
 
 Next, the change in consumption is propagated across all waste fates.
 
