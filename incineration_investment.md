@@ -20,7 +20,7 @@ This intervention relies on information about capital and operating expense to i
 - Capital expenditure is amortized over 50 years.
 - The expanded capacity will be used for all waste types of which only a fraction is plastic ($\%_{plastic}$).
 - The addition of new infrastructure will redirect landfill and mismanaged to incineration.
-- There are known region specific observed values for mass of waste incinerated ($m_{incinerated}$) and both the operating cost ($r_{opex}$) and capital expenditure ($r_{capex}$).
+- There are known region specific observed values for mass of waste incinerated ($m_{incinerated}$) and both the operating cost ($c_{opex}$) and capital expenditure ($c_{capex}$).
 
 \medskip
 <br>
@@ -35,11 +35,11 @@ This uses materials describing capital and operating expenditures for incinerati
 # Primary impact
 Investment is a mix of capital and operating expense:
 
-$r_{annual} = r_{annual-opex} + \frac{r_{capex}}{50}$
+$c_{annual} = c_{annual-opex} + \frac{c_{capex}}{50}$
 
 This intervention assumes a potential change in the incineration ($m_{increase}$) over time based on an investment $I$:
 
-$m_{increase} = I * \frac{m_{incinerated}}{r_{annual}}$
+$m_{increase} = I * \frac{m_{incinerated}}{c_{annual}}$
 
 With this potential change defined:
 
