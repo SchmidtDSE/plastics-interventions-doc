@@ -1,19 +1,36 @@
 ---
-title: Sectorizing Secondary Material
-date: 2024-02-19
+title: Methods for Estimating Secondary Material Production through Sector-Level Recycling Approximation
+bibliography: /home/sam/Documents/Work/Plastics/Secondary/secondary.bib
+header-includes: |
+  \usepackage{float}
+  \floatplacement{figure}{H}
 ---
-**Summary**: In absence of comprehensive data regarding regionalized polymer reuse, this document demonstrates how material flow modeling may incorporate secondary consumption by offering approximated propensities for each sector to consume recycled materials.
+**Abstract**: Given sectors see different polymer distributions and lifecycle duration expectations, the lack of comprehensive regional reuse data complicates plastics production modeling by preventing researchers from estimating the amount of recycling available at each year. Therefore, this supplemental document demonstrates how material flow approaches may incorporate secondary production by offering methods to approximate propensities for each sector to use recycled materials. Finally, estimated longitudinal production data separated by type demonstrate use of these estimations.
 
 <br>
+<br>
+\bigskip
 \bigskip
 
 # Introduction
-The literature do not yet offer comprehensive region-level data on sector-level recycling propensities. For example, consider that material flow modeling cannot estimate what percent of secondary production supports packaging versus transportation. This data limitation may lead to inaccuracy not just in consumption but waste as one cannot reliably determine the correct lifecycle distribution to apply to that secondary production. Though this stems from a lack of data regarding the application of secondary material, this short document observes that researchers may still have some information regarding the ability for different sectors to incorporate secondary production and proposes a modeling method to estimate recirculation of recycling into sector-level masses. It does this by approximating the propensities for recycling to enter into each regionalized sector.
+As discussed in prior work, important "data gaps" remain for plastics research [@wang_critical_2021]. In particular, this study finds difficulty in compiling comprehensive region-level data on sector-level or polymer-level recycling propensities. To understand the modeling need for this crucial information, consider that:
+
+ - Material flow modeling cannot estimate sector-level recycling rates like, for example, what percent of packaging versus transportation is recycled.
+ - This lack of information on sector-level recycling then complicates understanding the availability of secondary material per polymer.
+ - Given the different time to end of life expectations and polymer ratios per sector, this ambiguity in polymer-level recycling availability complicates prediction of primary versus secondary production overall.
+
+Though this stems from a lack of data regarding the application of secondary material, this document observes that researchers may still have some information regarding the ability for different sectors to incorporate secondary production and proposes a modeling method to estimate re-circulation of recycling into sector-level masses. It does this by approximating the propensities for recycling to enter into each regional sector using their polymer ratios.
+
 <br>
+<br>
+\bigskip
 \bigskip
 
 # Method
-After laying out essential simplifying assumptions, this method considers estimating the secondary polymer masses before turning to secondary sector mass in both a fully domestic and trade context.
+After laying out essential simplifying assumptions, this method first considers estimating the secondary polymer masses. Then, this document turns to secondary sector mass in both a fully domestic and trade context.
+
+<br>
+\bigskip
 
 ## Assumptions
 Before considering polymer mass, this study makes the following assumptions:
@@ -24,7 +41,10 @@ Before considering polymer mass, this study makes the following assumptions:
  - **Assumption 4**: All recycled material is reused except for **Assumption 1**'s uniform yield loss across all regions, sectors, and polymers. In other words, excluding yield loss, material indicated as recycled in the dataset is actually reused. Any waste which was collected as recycling but not actually reused is assumed to be captured in different EOL fates.
  - **Assumption 5**: The propensities for end of life fate and for consumption sector are the same between domestic and traded material.
 
-These are further explored below.
+These assumptions are further explored below.
+
+<br>
+\bigskip
 
 ## Fully domestic
 This document first considers these calculations in a fully domestic context.
@@ -90,12 +110,15 @@ Additionally, this analysis uses an **Assumption 4** which expects all recycled 
 
 $s_{sector|region|balance} = \frac{s_{sector|region}}{\Sigma s_{sector|region}} * e_{region} * p_{recycling|region} * (1 - l)$
 
+<br>
+\bigskip
+
 ## Trade
-As regions may trade both waste and goods, which secondary consumption should be expected for exported waste?  For waste using **Assumption 5**:
+As regions may trade both waste and goods, this document next considers which secondary consumption should be expected for exports at end of life, starting with **Assumption 5**:
 
 $e_{region} = e_{region|domestic} - e_{region|exports} + e_{region|imports}$
 
-Continuing to consumption using **Assumption 5**:
+Continuing to consumption using the same **Assumption 5**:
 
  - The consumption from waste imports are not added to the region of import but instead attributed to a global trade in secondary consumption.
  - That global trade in secondary consumption is apportioned to importers relative to the size of their overall net production imports.
@@ -106,10 +129,11 @@ $s_{sector|region|post-trade} = s_{sector|region} * (1 - p_{export|region}) + s_
 
 Note that, in practice, this would use $s_{sector|region|balance}$ to satisfy **Constraint 2**.
 
-## Circularity
-Note that this document so far describes the determination of secondary consumption from primary waste but this process may repeat as recycled materials may recirculate again. This requires code to iteratively evaluate for these masses as it changes $e_{region}$ and  $p_{sector|region}$ per year. Therefore, iteration would involve repeating this process but, instead of using primary waste as input, it uses secondary waste from the prior iteration.
+<br>
+\bigskip
 
-Put formally, consider the following where $w$ is a function that determines new waste across sectors given a year using lifecycle distributions:
+## Circularity
+Note that this document so far describes the determination of secondary consumption from primary waste but this process may repeat as recycled materials may recirculate again. This requires code to iteratively evaluate for these masses as it changes $e_{region}$ and  $p_{sector|region}$ per year. This additional step would involve "looping" this process but, instead of using primary waste as input, it uses secondary waste from the prior iteration. Put formally, consider the following where $w$ is a function that determines new waste across sectors given a year using lifecycle distributions:
 
 - If first iteration: $e_{region}(iter, year) = e_{region}(year)$
 - If subsequent iterations: $e_{region}(iter, year) = w(s_{sector|region|post-trade}(iter-1), year)$
@@ -125,24 +149,9 @@ $error < (1 - 0.2)^{30 + 1}$
 $error < 0.00099$
 
 Different yield loss rates would require adjustment of these parameters.
+
 <br>
 \bigskip
-
-# Discussion
-This discussion further considers the conceptual meaning of the derivation, limitations, and implications for implementation.
-
-## Conceptual meaning
-This **Formula 3** conceptually states that, after yield loss, the amount of recycled material in a region goes into each sector proportional to the mass of that sector which can use recyclable polymers. In other words, recycled materials are distributed proportionally to the ability for a sector within a region to receive recyclable materials. Given **Assumption 4**, this method offers a **Formula 4** which ensures all recycled material is actually used in consumption.
-
-## Limitations
-This document highlights future work regarding its four assumptions:
-
- - **Assumption 1** could be relaxed by sectorizing $p_{recycling|region}$, requiring additional data collection but further improving model accuracy.
- - **Assumptions 2 and 4** assume a constant yield loss but this could be relaxed by removing $l$ and adjusting $p_{polymer|recyclable}$, a value which could also be regionalized.
- - **Assumption 3** could be relaxed if recycling propensities become available per polymer by region, removing the approximation used above.
- - **Assumption 5**: Could be relaxed by assuming a sector-level version of $p_{export|region}$.
-
-This study does not currently have access to data required to take these steps, leaving that step for future work.
 
 ## Implementation
 Observe that some terms are held constant through time by sector and region:
@@ -153,7 +162,18 @@ Implementation could choose to precompute these values, further simplifying **Fo
 
 $s_{sector|region} = e_{region} * p_{recycling|region} * p_{sector|region} * c_{sector|region}$
 
-This **Formula 5** may speed implementation. Using a yield loss of 20% ($l = 0.2$), the following reference values are provided for convenience:
+This **Formula 5** may speed implementation.
+
+<br>
+<br>
+\bigskip
+\bigskip
+
+# Results
+This study arrives at the following projections using $c_{sector|region}$ with a yield loss of 20% ($l = 0.2$) Further details including regional and underlying sector-level results are available in the interactive tool at https://global-plastics-tool.org [@pottinger_combining_2023]. Note the remaining terms for **Formula 5** do change from year to year and programming may consider them displaced by some delay $d$ as previously discussed. 
+
+![Stacked area chart with global primary and secondary production.](results.png)
+Values of $c_{sector|region}$  are provided for reference as RatioWithLoss using prior published sector-level polymer ratios [@geyer_production_2017]:
 
 | Sector                 | Region | Ratio        | RatioWithLoss |
 |------------------------|--------|--------------|---------------|
@@ -190,10 +210,44 @@ This **Formula 5** may speed implementation. Using a yield loss of 20% ($l = 0.2
 | Transporation          | NAFTA  | 0.6933333333 | 0.5546666667  |
 | Transporation          | RoW    | 0.7631578947 | 0.6105263158  |
 
-All that said, the remaining terms do change from year to year and programming may consider them displaced by some delay $d$ as previously discussed.
+<br>
+<br>
+\bigskip
+\bigskip
+
+# Discussion
+This discussion further considers the conceptual meaning of the derivation, limitations, and implications for implementation.
 
 <br>
 \bigskip
 
+## Conceptual meaning
+To supplement mathematical derivations, consider this method conceptually. In this framing, **Formula 3** states that, after yield loss, the amount of recycled material in a region goes into each sector proportional to the mass of that sector which can use recyclable polymers. In other words, recycled materials are distributed proportionally to the ability for a sector within a region to receive recyclable materials. Then, given **Assumption 4**, this method's **Formula 4** ensures all recycled material is actually used, closing the loop between production and end of life. One may observe that, by extension, sectors therefore produce secondary material in proportion to the amount of recycling they generate due to their polymer ratios but that these "recycling propensities" depend both on region and sector.
+
+<br>
+\bigskip
+
+## Limitations and future work
+This document highlights future work regarding its five assumptions:
+
+ - **Assumption 1** could be relaxed by sectorizing $p_{recycling|region}$, requiring additional data collection but further improving model accuracy.
+ - **Assumptions 2 and 4** assume a constant yield loss but this could be relaxed by removing $l$ and adjusting $p_{polymer|recyclable}$, a value which could also be regionalized.
+ - **Assumption 3** could be relaxed if recycling propensities become available per polymer by region, removing the approximation used above.
+ - **Assumption 5**: Could be relaxed by assuming a sector-level version of $p_{export|region}$.
+
+This study does not currently have access to data required to take these steps, leaving opportunities for future work.
+
+<br>
+<br>
+\bigskip
+\bigskip
+
 # Conclusion
-This document calls for additional data regarding polymer reuse at the regional sector level where that lack of detailed comprehensive data on the regional consumption of secondary polymers presents challenges to material flow modeling. However, the nature of policy making may require the expediency of an approximated approach lest data become delayed beyond a realistic timeline needed for collective action. Therefore, leveraging knowledge about polymer ratios and recyclability, this document offers a method for tracking those recirculated materials in absence of those detailed observational data. This enables a more holistic understanding of secondary reuse and, despite reasonable approximations made by this method, the resulting projections still likely support timely practical policy decision making.
+This document calls for additional study regarding polymer reuse at the regional sector level where lack of those detailed comprehensive data presents challenges to material flow modeling. However, the nature of policy making may require the expediency of an approximated approach or else data may become delayed beyond a realistic timeline needed for collective action given ongoing international treaty efforts [@jones_progress_2023; @pottinger_combining_2023]. Therefore, leveraging knowledge about polymer ratios and recyclability, this document offers a method for tracking those recirculated materials in absence of detailed observational information. This enables a more holistic understanding of secondary reuse and, despite reasonable approximations made by this method, the resulting projections still likely support timely practical policy decision making. These approaches are included in article main text and the live version of https://global-plastics-tool.org, further building upon the underlying base model.
+
+<br>
+<br>
+\bigskip
+\bigskip
+
+# Works Cited
