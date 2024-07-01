@@ -209,7 +209,7 @@ $e = max(\Sigma T_{net}(r), \Sigma T_{net}(s))$
 
 Without optimization, this error generally extends up to 2 MMT but this decreases to 1 MMT with this operation, generally requiring four iterations before convergence.
 
-![Density of error before and after optimization.](optimization_results.png)
+![Density of error before and after optimization.](optimization_results.png){ width=80% }
 
 Some irreducible value of $e$ seems to emerge due to cumulative model uncertainty. However, in the scope of the broader volume predictions, this error remains acceptable.
 
