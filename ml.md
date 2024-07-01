@@ -114,7 +114,7 @@ Evaluation begins with traditional in-sample analysis. However, this article als
 ## In-sample performance
 Modeling uses a train, validation, and test split constructed from all available years of 67% of data for training and 17% for validation due to dataset size.
 
-![Each model swept with validation errors of each response variable converted to effective MMT error seen in final projections](inSample.png)
+![Each model swept with validation errors of each response variable converted to effective MMT error seen in final projections](inSample.png){ width=80% }
 
 While often not the lowest validation mean absolute error (MAE), random forest offers strong hidden set performance with fewer signs of overfit compared to others like AdaBoost. Structurally, random forest can handle expected non-linearity and, suggesting stability, a number of the swept forests reflect similarly strong performance. Given these results, this article chooses random forest for all response variables.
 
