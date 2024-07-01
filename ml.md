@@ -1,5 +1,5 @@
 ---
-bibliography: sources.bib
+bibliography: /home/sam/Documents/Work/Plastics/ML/ml.bib
 title: Machine Learning for Region-Level Prediction of Plastic Production, Trade, and Pollution
 header-includes: |
   \usepackage{float}
@@ -109,7 +109,7 @@ Similarly, for both goods and waste, this pipeline scales trade numbers after co
 <br> \bigskip
 
 # Results
-Evaluation begins with traditional in-sample analysis. However, this article also considers a temporally displaced out-of-sample task and region-level performance / sensitivity evaluation.
+Evaluation begins with traditional in-sample analysis. However, this article also considers a various post-hoc evaluations.
 
 ## In-sample performance
 Modeling uses a train, validation, and test split constructed from all available years of 67% of data for training and 17% for validation due to dataset size.
