@@ -1,5 +1,5 @@
 ---
-bibliography: /home/sam/Documents/Work/Plastics/ML/ml.bib
+bibliography: sources.bib
 title: Machine Learning for Region-Level Prediction of Plastic Production, Trade, and Pollution
 header-includes: |
   \usepackage{float}

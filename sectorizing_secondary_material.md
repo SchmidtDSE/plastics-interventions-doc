@@ -1,6 +1,6 @@
 ---
 title: Methods for Estimating Secondary Material Production through Sector-Level Recycling Approximation
-bibliography: /home/sam/Documents/Work/Plastics/Secondary/secondary.bib
+bibliography: sources.bib
 header-includes: |
   \usepackage{float}
   \floatplacement{figure}{H}
