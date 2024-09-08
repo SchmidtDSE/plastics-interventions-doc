@@ -28,7 +28,7 @@ In addition to making assumptions within the modeling, this intervention relies 
 <br>
 
 ## External knowledge
-This considers a variety of data sources on existing packaging consumption taxes. Specifically, note that there have been multiple examples types of taxes applied to single use plastic items like plastic bags across regions [@carr2020; @vdeq; @montgomery; @chicago; @maine; @boland2020; @wang2022; @anastasio2022; @uk2021; @licollari2023; @agencia; @ey]. Though information is available on multiple types of taxes, this intervention gives particular attention to plastic bag taxes paid by consumers.
+This considers a variety of data sources on existing packaging consumption taxes. Specifically, note that there have been multiple examples types of taxes applied to single use plastic items like plastic bags across regions which we normalize for PPP and inflation [@he_effects_2012; @scaan_effectiveness_2019; @wolfram_alpha_developers_wolframalpha_nodate; @thomas_english_2019; @martinho_portuguese_2017; @convery_most_2007; @homonoff_skipping_nodate; @opinonworks_ddoealice_2013; @city_of_boulder_disposable_nodate; @dikgang_analysis_2012; @ministry_of_environmental_protection_israelis_2020; @nishijima_survey_2024; @rokoua_mataiciwa_plastic_2021; @protafolio_impuesto_2022; @the_world_bank_group_ppp_nodate; @world_bank_group_inflation_nodate; @homonoff_preliminary_2017]. We also offer additional sources of interest in our works cited [@carr2020; @vdeq; @montgomery; @chicago; @maine; @boland2020; @wang2022; @anastasio2022; @uk2021; @licollari2023; @agencia; @ey]. Though information is available on multiple types of taxes, this intervention gives particular attention to plastic bag taxes paid by consumers.
 
 \bigskip
 <br>
@@ -52,16 +52,7 @@ This formula includes a mixture of parameters given by external literature and u
 To determine the change in consumption function for a tax rate $y(t)$, a fit model is used.
 
 ### Non-linearity
-Though few data points are available, observed data show non-linearity. For example, consider the expected tax (USD cents) required to achieve 50% reduction in consumption by linearly extrapolating each region's low, middle, and high tax example.
-
-|        | High  | Middle | Low  |
-|--------|-------|--------|------|
-| China  | 4.38  | 4.67   | 5.00 |
-| EU30   | 28.42 | 12.88  | 3.52 |
-| NAFTA  | 6.13  | 5.11   | 5.95 |
-| RoW    | 2.78  | 2.71   | 2.08 |
-
-Some regions like the EU30, in particular, show signs of large non-linearity. This may arise out of different price sensitivities and consumer behaviors that are regionally-specific.
+Though few data points are available, observed data show non-linearity as seen in the included figure. Therefore, we allow fit models to fit second order curves.
 
 ### Fit models
 All this in mind, the function $y$ has a number of expectations:
@@ -74,12 +65,12 @@ All this in mind, the function $y$ has a number of expectations:
 
 To meet these constraints, a curve is fit for $y(t) = max(min(t^a * b, 1), 0)$:
 
-|       | a    | b    |
-|-------|------|------|
-| China | 1.14 | 0.09 |
-| EU30  | 0.13 | 0.56 |
-| NAFTA | 0.83 | 0.12 |
-| RoW   | 0.86 | 0.22 |
+|       | a     | b     |
+|-------|-------|-------|
+| China | 0.519 | 0.168 |
+| EU30  | 1.082 | 0.024 |
+| NAFTA | 0.247 | 0.329 |
+| RoW   | 0.862 | 0.062 |
 
 These result in the following curves:
 
@@ -87,12 +78,12 @@ These result in the following curves:
 
 Absent additional information, this curve-fitting approach provides a reasonable starting point based on observed evidence. However, note that we remain skeptical about out of sample prediction. Consider the following "high" tax examples for each region:
 
-|        | Percent Decrease | Tax per Article in USD Cents |
-|--------|------------------|------------------------------|
-| China  | 80%              | 7                            |
-| EU     | 95%              | 54                           |
-| NAFTA  | 82%              | 10                           |
-| RoW    | 90%              | 5                            |
+|        | Tax per Article in USD PPP Cents |
+|--------|----------------------------------|
+| China  | 19                               |
+| EU     | 23                               |
+| NAFTA  | 13                               |
+| RoW    | 14                               |
 
 Therefore, the user receives a warning in the UI if they simulate tax levels above these tax levels and the scenarios shown to the user on the overview tab stay within sample.
 
