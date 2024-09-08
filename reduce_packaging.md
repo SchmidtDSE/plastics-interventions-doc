@@ -28,6 +28,12 @@ This intervention is mechanistic and does not use significant external literatur
 ## External knowledge
 This intervention does not use external literature to provide constants or other numbers beyond what is in the model itself though it uses some polymer-level data available from the underlying business as usual model.
 
+\medskip
+<br>
+
+## Scope
+Lacking a consensus definition for "single use" packaging, the tool's default $\%_{packaging-SU}$ targets non-durable packaging. Though imperfect, we estimate this percentage by polymer usage (L/LDPE and PET) which amounts to roughly half of the sector on average. Note that this intervention only impacts packaging even though the polymers considered may appear in other sectors.
+
 \bigskip
 <br>
 <br>
