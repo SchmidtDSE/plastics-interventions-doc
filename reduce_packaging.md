@@ -32,7 +32,7 @@ This intervention does not use external literature to provide constants or other
 <br>
 
 ## Scope
-Lacking a consensus definition for "single use" packaging, the tool's default $\%_{packaging-SU}$ targets non-durable packaging. Though imperfect, we estimate this percentage by polymer usage (L/LDPE and PET) which amounts to roughly half of the sector on average. Note that this intervention only impacts packaging even though the polymers considered may appear in other sectors.
+Lacking a consensus definition for "single use" packaging, we estimate this $\%_{packaging-SU}$ to be half of the sector. This parameter is subject to Monte Carlo (0.4 - 0.6).
 
 \bigskip
 <br>
